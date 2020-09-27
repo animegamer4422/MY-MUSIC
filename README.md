@@ -8,9 +8,6 @@ TYPE 'my-music' to download videos and 'my-musicao' to download audio and 'my-mu
 
 AND LASTLY type my-musichelp to see this help/usage message
 
+One line to install all
 
-Two lines to install all
-
-termux-setup-storage
-
-cd && pkg install git -y && git clone https://github.com/animegamer4422/MY-MUSIC && cd MY-MUSIC && chmod +x my-musicinst && bash my-musicinst
+cd && pkg install git -y && git clone https://github.com/animegamer4422/MY-MUSIC && cd MY-MUSIC && chmod +x my-musicinst && termux-setup-storage && bash my-musicinst
