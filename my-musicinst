@@ -25,6 +25,8 @@ cp '/data/data/com.termux/files/home/MY-MUSIC/my-musicao' "/data/data/com.termux
 
 cp '/data/data/com.termux/files/home/MY-MUSIC/my-musiccs' "/data/data/com.termux/files/usr/bin"
 
+cp '/data/data/com.termux/files/home/MY-MUSIC/my-musiccsao' "/data/data/com.termux/files/usr/bin"
+
 cp '/data/data/com.termux/files/home/MY-MUSIC/my-musicao' "/data/data/com.termux/files/usr/bin/"
 
 rm /data/data/com.termux/files//usr/lib/python3.8/site-packages/youtube_dl/postprocessor/embedthumbnail.py
