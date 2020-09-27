@@ -23,7 +23,7 @@ Master Now Tell Me What You Want To Name The Video
 "
 echo "And To Help You This Is The Original Video Title"
 
-echo "$(youtube-dl --get-title $URL)
+echo "$(youtube-dl --get-title $URL)"
 
 read -p 'NAME: ' TAG
 
