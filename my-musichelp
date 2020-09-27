@@ -1,0 +1,11 @@
+#! /data/data/com.termux/files/usr/bin/bash
+
+echo "TYPE 'my-music' to download videos and 'my-musicao' to download audio and 'my-musiccs'/my-musiccsao to cut and save a video/audio without downloading the whole video
+
+"
+
+echo "
+
+AND LASTLY TYPE my-musichelp to see this help/usage message
+
+"

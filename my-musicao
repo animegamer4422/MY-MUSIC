@@ -1,0 +1,19 @@
+#! /data/data/com.termux/files/usr/bin/bash
+
+echo "Master Input The MRL you Want To download
+
+"
+
+read -p 'URL : ' URL
+
+echo "Master Now Tell Me What You Want To Tag To The Name Of The Video
+
+"
+
+read -p 'TAG (A Single Word): ' TAG
+
+echo "Now Commencing Download
+
+"
+
+youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 --newline -o '/data/data/com.termux/files/home/storage/shared/MY-MUSIC/%(title)s['$TAG'].%(ext)s' $URL

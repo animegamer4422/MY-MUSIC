@@ -1,0 +1,51 @@
+#! /data/data/com.termux/files/usr/bin/bash
+
+echo "Master Input The MRL you Want To download
+
+"
+
+read -p 'MRL : ' URL
+
+echo "Master Tell Me The Quality You Want To Download The Video In"
+
+#echo "e.g. 1080 720 480 360 240 144"
+
+#read -p 'QUALITY : ' QUALITY
+
+echo "Master Now Tell Me What You Want To Name The Video
+
+"
+
+read -p 'NAME: ' TAG
+
+echo "Master Now Give Me The Start Time
+
+"
+
+read -p 'HH:MM:SS.MLS : ' STARTTIME
+
+echo "Master Now Give Me The END Time
+
+"
+
+read -p 'HH:MM:SS.MLS : ' ENDTIME
+
+echo "
+
+Now Commencing Download"
+
+#video=$(youtube-dl -g -f "bestvideo[ext=mp4][height<="$QUALITY"]" $URL)
+
+audio=$(youtube-dl -g -f "bestaudio[ext=m4a]" $URL)
+
+title=$(youtube-dl --get-title $URL)
+
+thumbnail=$(youtube-dl --get-thumbnail)
+
+filename=" $TAG"
+
+ffmpeg  -i "$audio" -ss $STARTTIME -to $ENDTIME -c copy rename-me.mkv
+
+ffmpeg  -i rename-me.mkv -i "$thumbnail" rename-me.mp3
+
+mv rename-me.mp3 ~/storage/shared/MY-MUSIC/"$filename.mp3"

@@ -1,0 +1,62 @@
+#! /data/data/com.termux/files/usr/bin/bash
+
+echo "
+
+Master Let Me Setup Things For You. Just Wait Till I Am Finished
+
+"
+read -p 'PRESS ENTER TO CONTINUE'
+
+pkg install python -y
+pip install --upgrade pip
+pip install youtube-dl
+apt install atomicparsley ffmpeg -y
+cd
+
+mkdir '/data/data/com.termux/files/home/storage/shared/MY-MUSIC'
+
+cd
+
+cp '/data/data/com.termux/files/home/MY-MUSIC/my-music' "/data/data/com.termux/files/usr/bin"
+
+cp '/data/data/com.termux/files/home/MY-MUSIC/my-musichelp' "/data/data/com.termux/files/usr/bin"
+
+cp '/data/data/com.termux/files/home/MY-MUSIC/my-musicao' "/data/data/com.termux/files/usr/bin/"
+
+cp '/data/data/com.termux/files/home/MY-MUSIC/my-musiccs' "/data/data/com.termux/files/usr/bin"
+
+cp '/data/data/com.termux/files/home/MY-MUSIC/my-musicao' "/data/data/com.termux/files/usr/bin/"
+
+rm /data/data/com.termux/files//usr/lib/python3.8/site-packages/youtube_dl/postprocessor/embedthumbnail.py
+
+cp '/data/data/com.termux/files/home/MY-MUSIC/embedthumbnail.py' /data/data/com.termux/files//usr/lib/python3.8/site-packages/youtube_dl/postprocessor/
+
+#cp '/data/data/com.termux/files/home/storage/downloads/youtube-dl/convall' "/data/data/com.termux/files/usr/bin/"
+
+chmod +x '/data/data/com.termux/files/usr/bin/my-musicao'
+
+chmod +x '/data/data/com.termux/files/usr/bin/my-music'
+
+chmod +x '/data/data/com.termux/files/usr/bin/my-musiccs'
+
+chmod +x '/data/data/com.termux/files/usr/bin/my-musiccsao'
+
+chmod +x '/data/data/com.termux/files/usr/bin/my-musichelp'
+
+#chmod +x '/data/data/com.termux/files/usr/bin/convall'
+
+echo "
+
+"
+
+echo "ALL TASKS COMPLETED SUCCESSFULLY
+
+"
+
+echo "TYPE 'my-music' to download videos and 'my-musicao' to download audio and 'my-musiccs'/my-musiccsao to cut and save a video/audio without downloading the whole video
+
+AND LASTLY TYPE my-musichelp to see this help/usage message
+
+"
+
+echo "HAVE A GOOD DAY"
