@@ -16,9 +16,14 @@ echo "e.g. 1080 720 480 360 240 144
 
 read -p 'QUALITY : ' QUALITY
 
-echo "Master Now Tell Me What You Want To Name The Video
+echo "
+
+Master Now Tell Me What You Want To Name The Video
 
 "
+echo "And To Help You This Is The Original Video Title"
+
+echo "$(youtube-dl --get-title $URL)
 
 read -p 'NAME: ' TAG
 
