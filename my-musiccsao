@@ -42,10 +42,12 @@ title=$(youtube-dl --get-title $URL)
 
 thumbnail=$(youtube-dl --get-thumbnail)
 
-filename=" $TAG"
+filename="$TAG"
 
 ffmpeg  -i "$audio" -ss $STARTTIME -to $ENDTIME -c copy rename-me.mkv
 
 ffmpeg  -i rename-me.mkv -i "$thumbnail" rename-me.mp3
+
+rm rename-me.mkv
 
 mv rename-me.mp3 ~/storage/shared/MY-MUSIC/"$filename.mp3"
