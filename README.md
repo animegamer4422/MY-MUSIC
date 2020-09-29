@@ -5,9 +5,9 @@ IT USES OPEN SOURCE TOOLS WHICH ARE FFMPEG & YOUTUBE-DL
 
 The Usage 
 
-TYPE 'my-music' to download videos and 'my-musicao' to download audio and 'my-musiccs'/my-musiccsao to cut and save a video/audio without downloading the whole video
+TYPE 'my-music' to download videos and 'my-musicao' to download ao(audio only) and 'my-musiccs'/'my-musiccsao' to cs(cut and save) a video/audio without downloading the whole video
 
-AND LASTLY type my-musichelp to see this help/usage message and type my-musicupdate to reinstall/update the script
+AND LASTLY type 'my-musichelp' to see this help/usage message and type my-musicupdate to reinstall/update the script
 
 One line to install all
 
