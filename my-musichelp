@@ -2,7 +2,7 @@
 
 echo "
 
-TYPE 'my-music' to download videos and 'my-musicao' to download audio and 'my-musiccs'/my-musiccsao to cut and save a video/audio without downloading the whole video
+TYPE 'my-music' to download videos and 'my-musicao' to download ao(audio only) and 'my-musiccs'/'my-musiccsao' to cs(cut and save) a video/audio without downloading the whole video
 
 "
 
