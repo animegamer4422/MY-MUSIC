@@ -33,7 +33,7 @@ rm /data/data/com.termux/files//usr/lib/python3.8/site-packages/youtube_dl/postp
 
 cp '/data/data/com.termux/files/home/MY-MUSIC/embedthumbnail.py' /data/data/com.termux/files//usr/lib/python3.8/site-packages/youtube_dl/postprocessor/
 
-#cp '/data/data/com.termux/files/home/storage/downloads/youtube-dl/convall' "/data/data/com.termux/files/usr/bin/"
+cp '/data/data/com.termux/files/home/storage/downloads/youtube-dl/my-musicupdate' "/data/data/com.termux/files/usr/bin/"
 
 chmod +x '/data/data/com.termux/files/usr/bin/my-musicao'
 
@@ -45,7 +45,7 @@ chmod +x '/data/data/com.termux/files/usr/bin/my-musiccsao'
 
 chmod +x '/data/data/com.termux/files/usr/bin/my-musichelp'
 
-#chmod +x '/data/data/com.termux/files/usr/bin/convall'
+chmod +x '/data/data/com.termux/files/usr/bin/my-musicupdate'
 
 echo "
 
