@@ -1,12 +1,16 @@
 #! /data/data/com.termux/files/usr/bin/bash
 
-echo "Master Input The MRL you Want To download
+echo "
+
+Master Input The MRL you Want To download
 
 "
 
 read -p 'MRL : ' URL
 
-echo "Master Tell Me The Quality You Want To Download The Video In
+echo "
+
+Master Tell Me The Quality You Want To Download The Video In
 
 "
 
@@ -31,13 +35,17 @@ $(youtube-dl --get-title $URL)
 
 read -p 'NAME: ' TAG
 
-echo "Master Now Give Me The Start Time
+echo "
+
+Master Now Give Me The Start Time
 
 "
 
 read -p 'HH:MM:SS.MLS : ' STARTTIME
 
-echo "Master Now Give Me The END Time
+echo "
+
+Master Now Give Me The END Time
 
 "
 
