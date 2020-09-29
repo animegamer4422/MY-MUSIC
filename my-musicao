@@ -6,13 +6,17 @@ echo "Master Input The MRL you Want To download
 
 read -p 'URL : ' URL
 
-echo "Master Now Tell Me What You Want To Tag To The Name Of The Video
+echo "
+
+Master Now Tell Me What You Want To Tag To The Name Of The Video
 
 "
 
 read -p 'TAG (A Single Word): ' TAG
 
-echo "Now Commencing Download
+echo "
+
+Now Commencing Download
 
 "
 
