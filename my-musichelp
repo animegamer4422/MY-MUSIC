@@ -8,6 +8,6 @@ TYPE 'my-music' to download videos and 'my-musicao' to download audio and 'my-mu
 
 echo "
 
-AND LASTLY TYPE my-musichelp to see this help/usage message
+AND LASTLY TYPE my-musichelp to see this help/usage message and type my-musicupdate to reinstall/update the script
 
 "
