@@ -29,6 +29,8 @@ cp '/data/data/com.termux/files/home/MY-MUSIC/my-musiccsao' "/data/data/com.term
 
 cp '/data/data/com.termux/files/home/MY-MUSIC/my-musicao' "/data/data/com.termux/files/usr/bin/"
 
+cp '/data/data/com.termux/files/home/MY-MUSIC/my-musicupdate' "/data/data/com.termux/files/usr/bin/"
+
 rm /data/data/com.termux/files//usr/lib/python3.8/site-packages/youtube_dl/postprocessor/embedthumbnail.py
 
 cp '/data/data/com.termux/files/home/MY-MUSIC/embedthumbnail.py' /data/data/com.termux/files//usr/lib/python3.8/site-packages/youtube_dl/postprocessor/
