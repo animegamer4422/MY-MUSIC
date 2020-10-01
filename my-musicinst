@@ -9,7 +9,7 @@ read -p 'PRESS ENTER TO CONTINUE'
 pkg install python -y
 pip install --upgrade pip
 pip install youtube-dl
-apt install atomicparsley ffmpeg aria2 -y
+apt install atomicparsley ffmpeg -y
 cd
 
 mkdir '/data/data/com.termux/files/home/storage/shared/MY-MUSIC'
@@ -36,8 +36,6 @@ cp '/data/data/com.termux/files/home/MY-MUSIC/embedthumbnail.py' /data/data/com.
 
 cp '/data/data/com.termux/files/home/MY-MUSIC/my-musicupdate' "/data/data/com.termux/files/usr/bin"
 
-cp '/data/data/com.termux/files/home/MY-MUSIC/tor' "/data/data/com.termux/files/usr/bin"
-
 chmod +x '/data/data/com.termux/files/usr/bin/my-musicao'
 
 chmod +x '/data/data/com.termux/files/usr/bin/my-music'
@@ -49,8 +47,6 @@ chmod +x '/data/data/com.termux/files/usr/bin/my-musiccsao'
 chmod +x '/data/data/com.termux/files/usr/bin/my-musichelp'
 
 chmod +x '/data/data/com.termux/files/usr/bin/my-musicupdate'
-
-chmod +x '/data/data/com.termux/files/usr/bin/tor'
 
 
 echo "
