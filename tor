@@ -1,0 +1,22 @@
+
+cd ~/storage/shared/
+
+echo "
+
+Master input the MAGNET LINK of the File
+
+"
+
+echo "
+Master In case You Forgot Where To Find The Link This Website Will Help You
+
+"
+
+echo "
+123movierulz.cc
+
+"
+
+read -p 'LINK : ' LINK
+
+aria2c "$LINK"
