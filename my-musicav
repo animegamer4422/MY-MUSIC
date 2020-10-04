@@ -1,6 +1,8 @@
 #! /data/data/com.termux/files/usr/bin/bash
 
-echo "Master Input The MRL you Want To download"
+echo "Master Input The MRL you Want To Download
+
+"
 
 read -p 'MRL : ' URL
 
