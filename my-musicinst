@@ -16,38 +16,9 @@ mkdir '/data/data/com.termux/files/home/storage/shared/MY-MUSIC'
 
 cd
 
-cp '/data/data/com.termux/files/home/MY-MUSIC/my-music' "/data/data/com.termux/files/usr/bin"
+cp '/data/data/com.termux/files/home/MY-MUSIC/my-musi*' "/data/data/com.termux/files/usr/bin"
 
-cp '/data/data/com.termux/files/home/MY-MUSIC/my-musichelp' "/data/data/com.termux/files/usr/bin"
-
-cp '/data/data/com.termux/files/home/MY-MUSIC/my-musicao' "/data/data/com.termux/files/usr/bin/"
-
-cp '/data/data/com.termux/files/home/MY-MUSIC/my-musiccs' "/data/data/com.termux/files/usr/bin"
-
-cp '/data/data/com.termux/files/home/MY-MUSIC/my-musiccsao' "/data/data/com.termux/files/usr/bin"
-
-cp '/data/data/com.termux/files/home/MY-MUSIC/my-musicao' "/data/data/com.termux/files/usr/bin/"
-
-cp '/data/data/com.termux/files/home/MY-MUSIC/my-musicupdate' "/data/data/com.termux/files/usr/bin/"
-
-rm /data/data/com.termux/files//usr/lib/python3.8/site-packages/youtube_dl/postprocessor/embedthumbnail.py
-
-cp '/data/data/com.termux/files/home/MY-MUSIC/embedthumbnail.py' /data/data/com.termux/files//usr/lib/python3.8/site-packages/youtube_dl/postprocessor/
-
-cp '/data/data/com.termux/files/home/MY-MUSIC/my-musicupdate' "/data/data/com.termux/files/usr/bin"
-
-chmod +x '/data/data/com.termux/files/usr/bin/my-musicao'
-
-chmod +x '/data/data/com.termux/files/usr/bin/my-music'
-
-chmod +x '/data/data/com.termux/files/usr/bin/my-musiccs'
-
-chmod +x '/data/data/com.termux/files/usr/bin/my-musiccsao'
-
-chmod +x '/data/data/com.termux/files/usr/bin/my-musichelp'
-
-chmod +x '/data/data/com.termux/files/usr/bin/my-musicupdate'
-
+chmod +x '/data/data/com.termux/files/usr/bin/my-musi*'
 
 echo "
 
