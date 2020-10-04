@@ -16,9 +16,9 @@ mkdir '/data/data/com.termux/files/home/storage/shared/MY-MUSIC'
 
 cd
 
-cp '/data/data/com.termux/files/home/MY-MUSIC/my-musi*' "/data/data/com.termux/files/usr/bin"
+cp '/data/data/com.termux/files/home/MY-MUSIC/my-*' "/data/data/com.termux/files/usr/bin"
 
-chmod +x '/data/data/com.termux/files/usr/bin/my-musi*'
+chmod +x '/data/data/com.termux/files/usr/bin/my-*'
 
 echo "
 
