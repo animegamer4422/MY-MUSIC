@@ -11,12 +11,17 @@ Master Now Tell Me What You Want To Tag To The Name Of The Video
 
 "
 
-read -p 'TAG (A Single Word): ' TAG
+read -p 'TAG : ' TAG
 
 echo "
 
 Now Commencing Download
 
 "
+title=youtube-dl --get-title $URL
 
-youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 --newline -o '/data/data/com.termux/files/home/storage/shared/MY-MUSIC/%(title)s['$TAG'].%(ext)s' $URL
+youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 --newline -o '/data/data/com.termux/files/home/storage/shared/MY-MUSIC/%(title)s.%(ext)s' $URL
+
+cd ~/storage/shared/MY-MUSIC/
+
+mv "title.mp4" "title [$TAG].mp4"
