@@ -3,7 +3,7 @@ echo "Master Input The MRL you Want To download
 
 "
 
-read -p 'MRL : ' URL
+read -p 'MRL(YOUTUBE VIDEO LINK) : ' URL
 
 echo "Master Tell Me The Quality You Want To Download The Video In
 
@@ -19,10 +19,14 @@ echo "Master Now Tell Me What You Want To Tag To The Name Of The Video
 
 "
 
-read -p 'TAG (A SINGLE WORD) : ' TAG
+read -p 'TAG : ' TAG
 
 echo "Now Commencing Download
 
 "
 
-youtube-dl -f "bestvideo[height<=$QUALITY][ext=mp4][fps<=30]+bestaudio[ext=m4a]" --add-metadata --embed-thumbnail --newline -o "~/storage/shared/MY-MUSIC/%(title)s"[$TAG]".%(ext)s" "$URL"
+youtube-dl -f "bestvideo[height<=$QUALITY][ext=mp4][fp>
+
+cd ~/storage/shared/MY-MUSIC/
+
+mv "$title.mp4" "$title [$TAG].mp4"
