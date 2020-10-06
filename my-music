@@ -5,7 +5,9 @@ echo "Master Input The MRL you Want To download
 
 read -p 'MRL(YOUTUBE VIDEO LINK) : ' URL
 
-echo "Master Tell Me The Quality You Want To Download The Video In
+echo "
+
+Master Tell Me The Quality You Want To Download The Video In
 
 "
 
@@ -15,7 +17,9 @@ echo "e.g. 1080 720 480 360 240 144
 
 read -p 'QUALITY : ' QUALITY
 
-echo "Master Now Tell Me What You Want To Tag To The Name Of The Video
+echo "
+
+Master Now Tell Me What You Want To Tag To The Name Of The Video
 
 "
 
