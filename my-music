@@ -33,4 +33,4 @@ youtube-dl -f "bestvideo[height<=$QUALITY][ext=mp4][fp>
 
 cd ~/storage/shared/MY-MUSIC/
 
-mv "$title.mp4" '$title [$TAG].mp4'
+mv "$title.mp4" "$title [$TAG].mp4"
