@@ -18,10 +18,10 @@ echo "
 Now Commencing Download
 
 "
-title=youtube-dl --get-title $URL
+title=$(youtube-dl --get-title $URL)
 
 youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 --newline -o '/data/data/com.termux/files/home/storage/shared/MY-MUSIC/%(title)s.%(ext)s' $URL
 
 cd ~/storage/shared/MY-MUSIC/
 
-mv "title.mp4" "title [$TAG].mp4"
+mv "$title.mp4" "$title [$TAG].mp4"
