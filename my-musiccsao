@@ -3,7 +3,7 @@ echo "Master Input The MRL you Want To download
 
 "
 
-read -p 'MRL : ' URL
+read -p 'MRL YOUTUBE VIDEO LINK: ' URL
 
 #echo "Master Tell Me The Quality You Want To Download The Video In"
 
