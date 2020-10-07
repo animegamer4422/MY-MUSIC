@@ -21,7 +21,7 @@ Master Now Tell Me What You Want To Tag To The Name Of The Video
 
 "
 
-read -p 'TAG (NO SPACE's): ' TAG
+read -p "TAG (NO SPACE's): " TAG
 
 echo "
 
