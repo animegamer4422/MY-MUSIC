@@ -61,3 +61,7 @@ filename="$TAG"
 ffmpeg -i $video -ss $STARTTIME -to $ENDTIME  rename-me.mkv
 
 mv rename-me.mkv ~/storage/shared/MY-MUSIC/"$filename.mkv"
+
+echo "
+
+      INTERNAL/MY-MUSIC/$filename.mkv"
