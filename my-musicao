@@ -24,4 +24,7 @@ youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 --newline -o '
 
 cd ~/storage/shared/MY-MUSIC/
 
-mv "rename-me.mp3" "$title [$TAG].mp4"
+mv "rename-me.mp3" "$title [$TAG].mp3"
+
+
+echo "internal/MY-MUSIC/$title [$TAG].mp3"
