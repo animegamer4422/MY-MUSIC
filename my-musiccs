@@ -71,3 +71,5 @@ ffmpeg -i rename-me.mkv -c copy rename-me.mp4
 rm rename-me.mkv
 
 mv rename-me.mp4 ~/storage/shared/MY-MUSIC/"$filename.mp4"
+
+echo "INTERNAL/MY-MUSIC/$filename.mp4"
