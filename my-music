@@ -1,4 +1,3 @@
-#! /bin/bash
 
 echo "Master Input The MRL you Want To download
 
@@ -38,4 +37,6 @@ cd ~/storage/shared/MY-MUSIC/
 
 mv "rename-me.mp4" "$title [$TAG].mp4"
 
-echo "internal/MY-MUSIC/$title [$TAG].mp4"
+echo "
+
+        INTERNAL/MY-MUSIC/$title [$TAG].mp4"
