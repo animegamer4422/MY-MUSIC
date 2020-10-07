@@ -37,3 +37,5 @@ youtube-dl -f "bestvideo[height<=$QUALITY][ext=mp4][fps<=30]+bestaudio[ext=m4a]"
 cd ~/storage/shared/MY-MUSIC/
 
 mv "rename-me.mp4" "$title [$TAG].mp4"
+
+echo "internal/MY-MUSIC/$title [$TAG].mp4"
