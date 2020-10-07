@@ -21,7 +21,7 @@ Master Now Tell Me What You Want To Tag To The Name Of The Video
 
 "
 
-read -p 'TAG : ' TAG
+read -p 'TAG (NO SPACE's): ' TAG
 
 echo "
 
@@ -31,11 +31,7 @@ Now Commencing Download
 
 title=$(youtube-dl --get-title $URL)
 
-youtube-dl -f "bestvideo[height<=$QUALITY][ext=mp4][fps<=30]+bestaudio[ext=m4a]" --add-metadata --embed-thumbnail --newline -o "~/storage/shared/MY-MUSIC/rename-me.%(ext)s" "$URL"
-
-cd ~/storage/shared/MY-MUSIC/
-
-mv "rename-me.mp4" "$title [$TAG].mp4"
+youtube-dl -f "bestvideo[height<=$QUALITY][ext=mp4][fps<=30]+bestaudio[ext=m4a]" --add-metadata --embed-thumbnail --newline -o "~/storage/shared/MY-MUSIC/%(title).%(ext)s[$TAG]" "$URL"
 
 echo "
 
