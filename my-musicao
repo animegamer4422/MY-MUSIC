@@ -20,7 +20,7 @@ Now Commencing Download
 "
 title=$(youtube-dl --get-title $URL)
 
-youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 --newline -o '/data/data/com.termux/files/home/storage/shared/MY-MUSIC/%(title)s.[$TAG]%(ext)s' $URL
+youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 --newline -o '/data/data/com.termux/files/home/storage/shared/MY-MUSIC/%(title)s[$TAG].%(ext)s' $URL
 
 
 echo "
