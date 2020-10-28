@@ -31,7 +31,7 @@ Now Commencing Download
 
 title=$(youtube-dl --get-title $URL)
 
-youtube-dl -f "bestvideo[height<=$QUALITY][ext=mp4][fps<=30]+bestaudio[ext=m4a]" --add-metadata --embed-thumbnail --newline -o "~/storage/shared/MY-MUSIC/%(title)s[$TAG].%(ext)s" "$URL"
+youtube-dl -f "bestvideo[height<=$QUALITY][ext=mp4]+bestaudio[ext=m4a]" --add-metadata --embed-thumbnail --newline -o "~/storage/shared/MY-MUSIC/%(title)s[$TAG].%(ext)s" "$URL"
 
 echo "
 
