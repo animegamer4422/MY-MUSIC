@@ -56,7 +56,7 @@ Now Commencing Download
 
 "
 
-video=$(youtube-dl -g -f "bestvideo[ext=mp4][height<="$QUALITY"]" $URL)
+video=$(youtube-dl -g -f "bestvideo[ext=mp4][height<="$QUALITY"]/bestvideo[height<="$QUALITY"]+bestaudio/best" $URL)
 
 audio=$(youtube-dl -g -f "bestaudio[ext=m4a]" $URL)
 
