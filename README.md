@@ -5,6 +5,8 @@ IT USES OPEN SOURCE TOOLS WHICH ARE FFMPEG & YOUTUBE-DL
 
 The Usage 
 
+Just share the video to termux after installing the script.
+
 TYPE 'my-music' to download videos and 'my-musicao' to download ao(audio only) and 'my-musiccs'/'my-musiccsao' to cs(cut and save) a video/audio without downloading the whole video and if ever cs(cut and save) scripts fail try using 'my-musicav'(advanced) to directly get the correct file and cut it.
 
 AND LASTLY type 'my-musichelp' to see this help/usage message and type 'my-musicupdate' to reinstall/update the script
