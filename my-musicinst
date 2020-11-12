@@ -12,8 +12,8 @@ pip install youtube-dl
 apt install atomicparsley ffmpeg -y
 cd
 
-mkdir '~/storage/shared/MY-MUSIC'
-mkdir '~/bin'
+mkdir ~/storage/shared/MY-MUSIC
+mkdir ~/bin
 
 cd
 
