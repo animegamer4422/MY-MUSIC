@@ -96,11 +96,6 @@ echo "
 AUDIO ONLY
 
 "
-echo "Master Input The MRL you Want To download
-
-"
-
-read -p 'MRL (YOUTUBE VIDEO LINK): ' URL
 
 echo "
 
