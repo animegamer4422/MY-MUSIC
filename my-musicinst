@@ -39,5 +39,6 @@ echo "TYPE 'my-music' to download videos and 'my-musicao' to download audio and 
 
 AND LASTLY type 'my-musichelp' to see this help/usage message and type 'my-musicupdate' to reinstall/update the script
 "
-
+echo "Just share the video to termux after installing the script.
+"
 echo "HAVE A GOOD DAY"
