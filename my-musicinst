@@ -23,7 +23,7 @@ cp ~/MY-MUSIC/termux-url-opener "~/bin/"
 
 chmod +x /data/data/com.termux/files/usr/bin/my-*
 
-chmod +x /data/data/com.termux/files/usr/bin/termux-*
+chmod +x ~/bin/termux-*
 
 
 echo "
