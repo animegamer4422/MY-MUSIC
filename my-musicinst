@@ -1,0 +1,43 @@
+
+echo "
+
+Master Let Me Setup Things For You. Just Wait Till I Am Finished
+
+"
+read -p 'PRESS ENTER TO CONTINUE'
+
+pkg install python -y
+pip install --upgrade pip
+pip install youtube-dl
+apt install atomicparsley ffmpeg -y
+cd
+
+mkdir '~/storage/shared/MY-MUSIC'
+mkdir '~/bin'
+
+cd
+
+cp ~/MY-MUSIC/my-* "/data/data/com.termux/files/usr/bin"
+
+cp ~/MY-MUSIC/termux-* "/data/data/com.termux/files/usr/bin"
+
+chmod +x /data/data/com.termux/files/usr/bin/my-*
+
+chmod +x /data/data/com.termux/files/usr/bin/termux-*
+
+
+echo "
+
+"
+
+echo "ALL TASKS COMPLETED SUCCESSFULLY
+
+"
+
+echo "TYPE 'my-music' to download videos and 'my-musicao' to download audio and 'my-musiccs'/my-musiccsao to cut and save a video/audio without downloading the whole video and if ever cs(cut and save) scripts fail try using my-musicav(advanced) to directly get the correct file and cut it without downloading the whole video.
+
+
+AND LASTLY type 'my-musichelp' to see this help/usage message and type 'my-musicupdate' to reinstall/update the script
+"
+
+echo "HAVE A GOOD DAY"
