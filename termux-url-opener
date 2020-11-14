@@ -46,7 +46,7 @@ Now Commencing Download
 
 title=$(youtube-dl --get-title $URL)
 
-youtube-dl -f "bestvideo[height<=$QUALITY][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best" --add-metadata --embed-thumbnail --recode-video mp4 --newline -o "~/storage/shared/MY-MUSIC/%(title)s[$TAG].%(ext)s" "$URL"
+youtube-dl -f "bestvideo[height<=$QUALITY][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 --newline -o "~/storage/shared/MY-MUSIC/%(title)s[$TAG].%(ext)s" "$URL"
 
 echo "
 
@@ -85,7 +85,7 @@ Now Commencing Download
 
 title=$(youtube-dl --get-title $URL)
 
-youtube-dl -f "bestvideo[height<=$QUALITY][ext=mp4]/bestvideo[height<=$QUALITY]" --add-metadata --embed-thumbnail --recode-video mp4 --newline -o "~/storage/shared/MY-MUSIC/%(title)s[$TAG].%(ext)s" "$URL"
+youtube-dl -f "bestvideo[height<=$QUALITY][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY/best" --add-metadata --embed-thumbnail --recode-video mp4 --newline -o "~/storage/shared/MY-MUSIC/%(title)s[$TAG].%(ext)s" "$URL"
 
 echo "
 
@@ -232,8 +232,6 @@ read -p 'HH:MM:SS.MLS : ' ENDTIME
 echo "
 
 Now Commencing Download"
-
-#video=$(youtube-dl -g -f "bestvideo[ext=mp4][height<="$QUALITY"]" $URL)
 
 audio=$(youtube-dl -g -f "bestaudio[ext=m4a]" $URL)
 
