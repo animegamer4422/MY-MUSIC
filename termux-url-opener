@@ -1,5 +1,9 @@
 URL=$1
 
+x=1
+
+while [ $x=1 ] 
+do
 echo "CHOOSE A OPTION "
 
 echo "
@@ -57,7 +61,7 @@ youtube-dl -f "bestvideo[height<=$QUALITY][ext=mp4]+bestaudio[ext=m4a]/bestvideo
 echo "
 
         INTERNAL/MY-MUSIC/$title [$TAG].mp4"
-;;
+exit;;
 
 
 	2) echo "
@@ -96,7 +100,7 @@ youtube-dl -f "bestvideo[height<=$QUALITY][ext=mp4]/bestvideo[height<=$QUALITY]/
 echo "
 
         INTERNAL/MY-MUSIC/$title [$TAG].mp4"
-;;
+exit;;
 
 	3) echo "
 
@@ -125,7 +129,7 @@ youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 --newline -o "
 echo "
 
       INTERNAL/MY-MUSIC/$title [$TAG].mp3"
-;;
+exit;;
 
 	4) echo "
 
@@ -200,7 +204,7 @@ mv rename-me.mp4 ~/storage/shared/MY-MUSIC/"$filename.mp4"
 echo "
 
       INTERNAL/MY-MUSIC/$filename.mp4"
-;;
+exit;;
 
 	5) echo "
 
@@ -260,7 +264,7 @@ mv rename-me.mp3 ~/storage/shared/MY-MUSIC/"$filename.mp3"
 echo "
 
       INTERNAL/MY-MUSIC/$filename.mp3"
-      ;;
+exit;;
 
 	*) echo "
 
