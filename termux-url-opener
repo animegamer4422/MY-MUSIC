@@ -1,7 +1,7 @@
 URL=$1
 x=1
 
-while [ $x=0 ] 
+while [ $x=1 ] 
 do
 echo "CHOOSE A OPTION "
 
@@ -22,7 +22,7 @@ case $OPTION in
 
     0) echo "EXITTING"
         sleep 2
-        x=1;;
+        x=0;;
 
 	1) echo "
 
