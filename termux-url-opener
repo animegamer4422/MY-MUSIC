@@ -21,8 +21,8 @@ read -p "OPTION:" OPTION
 case $OPTION in
 
     0) echo "EXITTING"
-        sleep 2
-        x=0;;
+sleep 2
+x=0;;
 
 	1) echo "
 
