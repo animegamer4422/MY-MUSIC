@@ -266,7 +266,8 @@ echo "
       INTERNAL/MY-MUSIC/$filename.mp3"
 exit;;
 
-	*) echo "
+	*) clear
+             echo "
 
 THATS NOT A OPTION PLEASE TRY AGAIN
 
