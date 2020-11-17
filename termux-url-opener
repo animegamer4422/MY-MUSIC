@@ -6,6 +6,7 @@ do
 echo "CHOOSE A OPTION "
 
 echo "
+    0) QUIT/EXIT
 	1) VIDEO + AUDIO
 	2) VIDEO ONLY
 	3) AUDIO ONLY
@@ -18,6 +19,11 @@ echo ""
 read -p "OPTION:" OPTION
 
 case $OPTION in
+
+    0) echo "EXITTING"
+        sleep 2
+        x=1;;
+
 	1) echo "
 
 VIDEO + AUDIO
