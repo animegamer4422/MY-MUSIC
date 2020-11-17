@@ -57,7 +57,7 @@ youtube-dl -f "bestvideo[height<=$QUALITY][ext=mp4]+bestaudio[ext=m4a]/bestvideo
 echo "
 
         INTERNAL/MY-MUSIC/$title [$TAG].mp4"
-x=1;;
+;;
 
 
 	2) echo "
@@ -96,7 +96,7 @@ youtube-dl -f "bestvideo[height<=$QUALITY][ext=mp4]/bestvideo[height<=$QUALITY]/
 echo "
 
         INTERNAL/MY-MUSIC/$title [$TAG].mp4"
-x=1;;
+;;
 
 	3) echo "
 
@@ -125,7 +125,7 @@ youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 --newline -o "
 echo "
 
       INTERNAL/MY-MUSIC/$title [$TAG].mp3"
-x=1;;
+;;
 
 	4) echo "
 
@@ -200,7 +200,7 @@ mv rename-me.mp4 ~/storage/shared/MY-MUSIC/"$filename.mp4"
 echo "
 
       INTERNAL/MY-MUSIC/$filename.mp4"
-x=1;;
+;;
 
 	5) echo "
 
@@ -260,7 +260,7 @@ mv rename-me.mp3 ~/storage/shared/MY-MUSIC/"$filename.mp3"
 echo "
 
       INTERNAL/MY-MUSIC/$filename.mp3"
-x=1;;
+      ;;
 
 	*) echo "
 
@@ -268,4 +268,3 @@ THATS NOT A OPTION PLEASE TRY AGAIN
 
 ";;
 esac
-done
