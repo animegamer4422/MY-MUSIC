@@ -34,11 +34,13 @@ echo "ALL TASKS COMPLETED SUCCESSFULLY
 
 "
 
-echo "TYPE 'my-music' to download videos and 'my-musicao' to download audio and 'my-musiccs'/my-musiccsao to cut and save a video/audio without downloading the whole video and if ever cs(cut and save) scripts fail try using my-musicav(advanced) to directly get the correct file and cut it without downloading the whole video.
+echo "
+Just share the video to termx.
 
+Or type my-music in termux
 
 AND LASTLY type 'my-musichelp' to see this help/usage message and type 'my-musicupdate' to reinstall/update the script
 "
-echo "Just share the video to termux after installing the script.
+echo "Just share the video to termux.
 "
 echo "HAVE A GOOD DAY"
