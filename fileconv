@@ -1,0 +1,40 @@
+
+
+if [ -d ~/storage/shared/convall ]
+then
+	echo "
+
+FOLDER 'convall' EXISTS STOPPING THE CREATION"
+
+else
+	echo "
+THE FOLDER 'convall' DOESN'T EXISTS
+
+" && mkdir ~/storage/shared/convall && echo "
+
+FOLDER 'convall' HAS BEEN CREATED SUCCESSFULLY
+
+"
+fi
+
+#for FILE in ~/storage/shared/convall/
+#do
+
+#files=$(ls ~/storage/shared/convall/)
+
+
+#if [[ -f "~/storage/shared/convall/*.m*" ]] 
+#then 
+#	echo "This file exists on your filesystem."
+#else
+#	echo "NO FILES FOUND :((" 
+#fi
+
+echo "THESE ARE ALL THE FILES FOUND IN convall"
+
+ls -1a ~/storage/shared/convall/
+
+
+read -p "CHOOSE A FORMAT TO CONVERT THE FILES:" FORMAT
+
+for i in ~/storage/shared/convall/*.m*; do ffmpeg -i ~/storage/shared/convall/"$(basename "$i")" ~/storage/shared/convall/"$(basename "$i")."$FORMAT"" ; done
