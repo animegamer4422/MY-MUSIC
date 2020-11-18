@@ -269,7 +269,7 @@ exit;;
 	*) clear
              echo "
 
-THATS NOT A OPTION PLEASE TRY AGAIN
+THATS NOT AN OPTION PLEASE TRY AGAIN
 
 ";;
 esac
