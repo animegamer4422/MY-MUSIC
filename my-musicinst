@@ -10,6 +10,7 @@ pkg install python -y
 pip install --upgrade pip
 pip install --upgrade youtube-dl
 apt install atomicparsley ffmpeg -y
+apt autoremove -y
 cd
 
 mkdir ~/storage/shared/MY-MUSIC
