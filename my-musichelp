@@ -1,8 +1,9 @@
+echo"
+Just share the video to termux after installing the SCRIPT
 
-echo "
+Or type my-music in termux 
 
-TYPE 'my-music' to download videos and 'my-musicao' to download ao(audio only) and 'my-musiccs'/'my-musiccsao' to cs(cut and save) a video/audio without downloading the whole video and if ever cs(cut and save) scripts fail try using my-musicav(advanced) to directly get the correct file and cut it without downloading the whole video.
-
+NOTE= CUT AND SAVE WILL NOT DOWNLOAD THE WHOLE VIDEO.
 "
 
 echo "
