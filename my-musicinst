@@ -19,11 +19,16 @@ cd
 
 cp ~/MY-MUSIC/my-* "/data/data/com.termux/files/usr/bin"
 
+cp ~/MY-MUSIC/file* "/data/data/com.termux/files/usr/bin"
+
 cp ~/MY-MUSIC/termux-url-opener ~/bin/
 
 chmod +x /data/data/com.termux/files/usr/bin/my-*
 
 chmod +x ~/bin/termux-*
+
+chmod +x /data/data/com.termux/files/usr/bin/file*
+
 
 
 echo "
