@@ -30,6 +30,8 @@ fi
 #	echo "NO FILES FOUND :((" 
 #fi
 
+read -p "Press Enter To See The Files In Convall : " convall
+
 echo "THESE ARE ALL THE FILES FOUND IN convall"
 
 ls -1a ~/storage/shared/convall/
