@@ -234,7 +234,7 @@ echo "
 
 Now Commencing Download"
 
-audio=$(youtube-dl -g -f "bestaudio[ext=m4a]" $URL)
+audio=$(youtube-dl -g -f "bestaudio" $URL)
 
 title=$(youtube-dl --get-title $URL)
 
