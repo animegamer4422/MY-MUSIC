@@ -30,6 +30,7 @@ VIDEO + AUDIO
 
 "
 echo "
+
 Master Input The MRL you Want To download
 
 "
@@ -72,6 +73,7 @@ VIDEO ONLY
 "
 
 echo "
+
 Master Input The MRL you Want To download
 
 "
@@ -115,6 +117,7 @@ AUDIO ONLY
 "
 
 echo "
+
 Master Input The MRL you Want To download
 
 "
@@ -145,6 +148,7 @@ CUT AND SAVE
 
 "
 echo "
+
 Master Input The MRL you Want To download
 
 "
@@ -227,6 +231,7 @@ CUT AND SAVE AUDIO ONLY
 
 "
 echo "
+
 Master Input The MRL you Want To download
 
 "
@@ -234,7 +239,6 @@ Master Input The MRL you Want To download
 read -p 'MRL(YOUTUBE VIDEO LINK) : ' URL
 
 echo "
-
 Master Now Tell Me What You Want To Name The Video
 
 "
