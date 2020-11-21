@@ -146,7 +146,7 @@ echo "And To Help You This Is The Original Video Title"
 
 echo "
 
-$(youtube-dl --get-title $URL)
+$(youtube-dl --get-title "$URL")
 
 "
 
@@ -174,9 +174,9 @@ Now Commencing Download
 
 "
 
-video=$(youtube-dl -g -f "bestvideo[ext=mp4][height<="$QUALITY"]" $URL)
+video=$(youtube-dl -g -f "bestvideo[ext=mp4][height<="$QUALITY"]" "$URL")
 
-audio=$(youtube-dl -g -f "bestaudio[ext=m4a]" $URL)
+audio=$(youtube-dl -g -f "bestaudio[ext=m4a]" "$URL")
 
 #title=$(youtube-dl --get-title $URL)
 
@@ -210,7 +210,7 @@ echo "
 And To Help You This Is The Original Video Title
 
 "
-echo $(youtube-dl --get-title $URL)
+echo $(youtube-dl --get-title "$URL")
 
 read -p 'NAME: ' TAG
 
@@ -234,11 +234,11 @@ echo "
 
 Now Commencing Download"
 
-audio=$(youtube-dl -g -f "bestaudio" $URL)
+audio=$(youtube-dl -g -f "bestaudio" "$URL")
 
-title=$(youtube-dl --get-title $URL)
+title=$(youtube-dl --get-title "$URL")
 
-thumbnail=$(youtube-dl --get-thumbnail)
+#thumbnail=$(youtube-dl --get-thumbnail)
 
 filename="$TAG"
 
