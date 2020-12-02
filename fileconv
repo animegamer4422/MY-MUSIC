@@ -1,0 +1,421 @@
+
+if [ -d ~/storage/shared/convall/ ]
+then
+	echo "
+
+FOLDER 'convall' EXISTS STOPPING THE CREATION
+"
+
+else
+	echo "
+THE FOLDER 'convall' DOESN'T EXISTS
+
+" && mkdir ~/storage/shared/convall/ && echo "
+
+FOLDER 'convall' HAS BEEN CREATED SUCCESSFULLY
+
+"
+fi
+
+read -p "PRESS ENTER TO SEE THE FILES IN convall"
+
+ls -a ~/storage/shared/convall/ | grep *.*
+
+#for i in ~/storage/shared/convall/*.* ; do echo "$(basename "$i")"  ; done
+
+x=1
+
+while [ x=1 ] 
+do
+
+echo "
+
+	0) EXIT/QUIT
+
+1) Video To Audio
+
+2) Video To Audio (Cut A Specific Part)
+   (Will do a cut on every file present in the folder) 
+
+3) Video To Video (Gallery supported) FAST 
+	(Doesn't support some files)
+
+4) Video To Video (Cut a specific Part) FAST
+   (Will do a cut on every file present in the folder)
+
+5) Video To Video (Gallery supported) Slow yet Best
+   (Works on everything but consumes more ram & time)
+
+6) Video To Video (Cut a specific Part) Slow yet Best
+(Works on everything but consumes more ram & time)
+
+7)  Audio To Audio (Gallery Supported) Fast
+	(Doesn't support some files)
+
+8) Audio To Audio (Cut a specific Part) FAST
+   (Will do a cut on every file present in the folder)
+
+9) Audio To Audio (Gallery Supported) Slow Yet Best
+   (Works on everything but consumes more ram & time)
+
+10) Audio To Audio (Cut a specific Part) Slow Yet Best
+    (Will do a cut on every file present in the folder)
+
+11) Custom FAST
+
+12) Custom Slow Yet Best
+"
+
+read -p "OPTION : " option
+
+case $option in
+
+	0) echo "EXITTING"
+sleep 1
+exit;;
+
+        1) echo "
+
+	VIDEO TO AUDIO"
+
+if [ -d ~/storage/shared/convall/converted ]
+then
+        echo "
+
+FOLDER 'converted' EXISTS STOPPING THE CREATION"
+
+else
+        echo "
+THE FOLDER 'converted' DOESN'T EXISTS
+
+" && mkdir ~/storage/shared/convall/converted && echo "
+
+FOLDER 'converted' HAS BEEN CREATED SUCCESSFULLY
+
+"
+fi
+
+for i in ~/storage/shared/convall/*.*; do ffmpeg -i ~/storage/shared/convall/"$(basename "$i")" ~/storage/shared/convall/converted/"$(basename "$i").mp3" ; done
+
+exit;;
+
+  2) echo "VIDEO TO AUDIO (CUT A SPECIFIC) PART
+echo "
+
+if [ -d ~/storage/shared/convall/converted ]
+then
+        echo "
+
+FOLDER 'converted' EXISTS STOPPING THE CREATION"
+
+else
+        echo "
+THE FOLDER 'converted' DOESN'T EXISTS
+
+" && mkdir ~/storage/shared/convall/converted && echo "
+
+FOLDER 'converted' HAS BEEN CREATED SUCCESSFULLY
+
+"
+fi
+
+read -p "START POINT : " SP
+
+echo "
+"
+
+read -p "END POINT : " EP
+
+for i in ~/storage/shared/convall/*.*; do ffmpeg -i ~/storage/shared/convall/"$(basename "$i")" -ss $SP -to $EP ~/storage/shared/convall/converted/"$(basename "$i").mp3" ; done
+
+exit;;
+
+
+	3) echo "VIDEO TO VIDEO (FOR GALLERY) FAST"
+
+if [ -d ~/storage/shared/convall/converted ]
+then
+        echo "
+
+FOLDER 'converted' EXISTS STOPPING THE CREATION"
+
+else
+        echo "
+THE FOLDER 'converted' DOESN'T EXISTS
+
+" && mkdir ~/storage/shared/convall/converted && echo "
+
+FOLDER 'converted' HAS BEEN CREATED SUCCESSFULLY
+
+"
+fi
+
+for i in ~/storage/shared/convall/*.*; do ffmpeg -i ~/storage/shared/convall/"$(basename "$i")" -c copy ~/storage/shared/convall/converted/"$(basename "$i")".mp4 ; done
+
+exit;;
+
+  4) echo "VIDEO TO VIDEO (FOR GALLERY) FAST"
+
+if [ -d ~/storage/shared/convall/converted ]
+then
+        echo "
+
+FOLDER 'converted' EXISTS STOPPING THE CREATION"
+
+else
+        echo "
+THE FOLDER 'converted' DOESN'T EXISTS
+
+" && mkdir ~/storage/shared/convall/converted && echo "
+
+FOLDER 'converted' HAS BEEN CREATED SUCCESSFULLY
+
+"
+fi
+
+read -p "START POINT : " SP
+
+echo "
+"
+
+read -p "END POINT : " EP
+
+for i in ~/storage/shared/convall/*.*; do ffmpeg -i ~/storage/shared/convall/"$(basename "$i")" -ss $SP -to $EP -c copy ~/storage/shared/convall/converted/"$(basename "$i")".mp4 ; done
+
+exit;;
+
+	5) echo "Video To Video (Gallery supported) Slow yet Best"
+
+if [ -d ~/storage/shared/convall/converted ]
+then
+        echo "
+
+FOLDER 'converted' EXISTS STOPPING THE CREATION"
+
+else
+        echo "
+THE FOLDER 'converted' DOESN'T EXISTS
+
+" && mkdir ~/storage/shared/convall/converted && echo "
+
+FOLDER 'converted' HAS BEEN CREATED SUCCESSFULLY
+
+"
+fi
+
+for i in ~/storage/shared/convall/*.*; do ffmpeg -i ~/storage/shared/convall/converted/"$(basename "$i")".mp4 ; done
+
+exit;;
+
+  6) echo "Video To Video (Cut A Specific Part) Slow yet Best"
+
+if [ -d ~/storage/shared/convall/converted ]
+then
+        echo "
+
+FOLDER 'converted' EXISTS STOPPING THE CREATION"
+
+else
+        echo "
+THE FOLDER 'converted' DOESN'T EXISTS
+
+" && mkdir ~/storage/shared/convall/converted && echo "
+
+FOLDER 'converted' HAS BEEN CREATED SUCCESSFULLY
+
+"
+fi
+
+for i in ~/storage/shared/convall/*.*; do ffmpeg -i ~/storage/shared/convall/converted/"$(basename "$i")" ~/storage/shared/convall/converted/"$(basename "$i")".mp4 ; done
+
+exit;;
+
+	7) echo "Audio To Audio (Gallery Supported) Fast
+"
+
+if [ -d ~/storage/shared/convall/converted ]
+then
+        echo "
+
+FOLDER 'converted' EXISTS STOPPING THE CREATION"
+
+else
+        echo "                                                                   THE FOLDER 'converted' DOESN'T EXISTS
+
+" && mkdir ~/storage/shared/convall/converted && echo "
+
+FOLDER 'converted' HAS BEEN CREATED SUCCESSFULLY
+
+"
+fi
+
+for i in ~/storage/shared/convall/*.*; do ffmpeg -i ~/storage/shared/convall/"$(basename "$i")" -c copy ~/storage/shared/convall/converted/"$(basename "$i").mp3" ; done
+
+echo "
+HAVE A GOOD DAY
+"
+exit;;
+
+  8) echo "Audio To Audio (Cut a specific Part) Fast
+"
+
+if [ -d ~/storage/shared/convall/converted ]
+then
+        echo "
+
+FOLDER 'converted' EXISTS STOPPING THE CREATION"
+
+else
+        echo "                                                                   THE FOLDER 'converted' DOESN'T EXISTS
+
+" && mkdir ~/storage/shared/convall/converted && echo "
+
+FOLDER 'converted' HAS BEEN CREATED SUCCESSFULLY
+
+"
+fi
+
+read -p "START POINT : " SP
+
+echo "
+"
+
+read -p "END POINT : " EP
+
+for i in ~/storage/shared/convall/*.*; do ffmpeg -i ~/storage/shared/convall/"$(basename "$i")" -ss $SP -to $EP -c copy ~/storage/shared/convall/converted/"$(basename "$i").mp3" ; done
+
+echo "
+HAVE A GOOD DAY
+"
+exit;;
+
+	9) echo "Audio To Audio (Gallery Supported) Slow Yet Best"
+
+if [ -d ~/storage/shared/convall/converted ]
+then
+	echo "
+
+FOLDER 'converted' EXISTS STOPPING THE CREATION"
+
+else
+	echo "
+THE FOLDER 'converted' DOESN'T EXISTS
+
+" && mkdir ~/storage/shared/convall/converted && echo "
+
+FOLDER 'converted' HAS BEEN CREATED SUCCESSFULLY
+
+"
+fi
+
+for i in ~/storage/shared/convall/*.*; do ffmpeg -i ~/storage/shared/convall/converted/"$(basename "$i")" ~/storage/shared/convall/"$(basename "$i")".mp3 ; done
+
+echo "HAVE A GOOD DAY"
+exit;;
+
+  10) echo "Audio To Audio (Cut A Specific Part) Slow Yet Best"
+
+if [ -d ~/storage/shared/convall/converted ]
+then
+	echo "
+
+FOLDER 'converted' EXISTS STOPPING THE CREATION"
+
+else
+	echo "
+THE FOLDER 'converted' DOESN'T EXISTS
+
+" && mkdir ~/storage/shared/convall/converted && echo "
+
+FOLDER 'converted' HAS BEEN CREATED SUCCESSFULLY
+
+"
+fi
+
+read -p "START POINT : " SP
+
+echo "
+"
+
+read -p "END POINT : " EP
+
+for i in ~/storage/shared/convall/*.*; do ffmpeg -i ~/storage/shared/convall/converted/"$(basename "$i")" -ss $SP -to $EP ~/storage/shared/convall/"$(basename "$i")".mp3 ; done
+
+echo "HAVE A GOOD DAY"
+exit;;
+
+	11) echo "
+Custom Fast
+"
+
+if [ -d ~/storage/shared/convall/converted ]
+then
+        echo "
+
+FOLDER 'converted' EXISTS STOPPING THE CREATION
+
+"
+
+else
+        echo "
+THE FOLDER 'converted' DOESN'T EXISTS
+
+" && mkdir ~/storage/shared/convall/converted && echo "
+
+FOLDER 'converted' HAS BEEN CREATED SUCCESSFULLY
+
+"
+fi
+
+read -p "CHOOSE A FORMAT TO CONVERT THE FILES : " FORMAT
+
+read -p "CHOOSE A START POINT : " SP
+
+read -p "CHOOSE A END POINT : " EP
+
+for i in ~/storage/shared/convall/*.*; do ffmpeg -i ~/storage/shared/convall/"$(basename "$i")" -ss $SP -to $EP -c copy ~/storage/shared/convall/converted/"$(basename "$i")"."$FORMAT" ; done
+
+echo "HAVE A GOOD DAY"
+exit;;
+
+ 12) echo "
+Custom Slow Yet Best
+"
+
+if [ -d ~/storage/shared/convall/converted ]
+then
+        echo "
+
+FOLDER 'converted' EXISTS STOPPING THE CREATION
+
+"
+
+else
+        echo "
+THE FOLDER 'converted' DOESN'T EXISTS
+
+" && mkdir ~/storage/shared/convall/converted && echo "
+
+FOLDER 'converted' HAS BEEN CREATED SUCCESSFULLY
+
+"
+fi
+
+read -p "CHOOSE A FORMAT TO CONVERT THE FILES : " FORMAT
+
+read -p "CHOOSE A START POINT : " SP
+
+read -p "CHOOSE A END POINT : " EP
+
+for i in ~/storage/shared/convall/*.*; do ffmpeg -i ~/storage/shared/convall/"$(basename "$i")" -ss $SP -to $EP ~/storage/shared/convall/converted/"$(basename "$i")"."$FORMAT" ; done
+
+echo "HAVE A GOOD DAY"
+exit;;
+
+*) clear
+             echo "
+THATS NOT AN OPTION PLEASE TRY AGAIN
+
+exit";;
+esac
+done
