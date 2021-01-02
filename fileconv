@@ -426,7 +426,7 @@ Example 3:30:25.500 = 3 hours 30 mins 25 secs 500 millisecs
 
 read -p "INPUT A DURATION : "
 
-for i in ~/storage/shared/convall/*.*; do ffmpeg -i ~/storage/shared/convall/"$(basename "$i")" -c copy -map 0 -segment_time $DURATION -f segment ~/storage/shared/convall/converted/"$(basename "$i"%03d).mp4" ; done
+for i in ~/storage/shared/convall/*.*; do ffmpeg -i ~/storage/shared/convall/"$(basename "$i")" -c copy -map 0 -f segment_time $DURATION ~/storage/shared/convall/converted/"$(basename "$i"%03d).mp4" ; done
 
 echo "HAVE A GOOD DAY"
 exit;;
