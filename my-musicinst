@@ -32,7 +32,7 @@ chmod +x /data/data/com.termux/files/usr/bin/file*
 
 cd
 
-ln -s ../usr/bin/my-music mm
+ln -s ../usr/bin/my-music ~/../usr/bin/mm
 
 echo "
 
