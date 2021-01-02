@@ -30,9 +30,9 @@ chmod +x ~/bin/termux-*
 
 chmod +x /data/data/com.termux/files/usr/bin/file*
 
-cd
+cd ~/../usr/bin
 
-ln -s ../usr/bin/my-music ~/../usr/bin/mm
+ln -s my-music mm
 
 echo "
 
