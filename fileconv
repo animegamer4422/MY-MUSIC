@@ -415,9 +415,14 @@ echo "HAVE A GOOD DAY"
 exit;;
 
 13) echo "
-Split/Cut The Video In Parts/Chunks (WHATSAPP)"
+Split/Cut The Video In Parts/Chunks (WHATSAPP)
+"
 
-echo "Example 3:30:25.500 = 3 hours 30 mins 25 secs 500 millisecs"
+echo "
+
+Example 3:30:25.500 = 3 hours 30 mins 25 secs 500 millisecs
+
+"
 
 read -p "INPUT A DURATION : "
 
