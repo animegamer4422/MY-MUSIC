@@ -12,6 +12,8 @@ echo "
 	3) AUDIO ONLY
 	4) CUT AND SAVE
 	5) CUT AND SAVE AUDIO ONLY
+        6) File Converter
+
 "
 
 echo ""
@@ -291,6 +293,13 @@ echo "
 
       INTERNAL/MY-MUSIC/$filename.mp3"
 exit;;
+
+        6) echo "
+
+FILE CONVERTER
+
+"
+fileconv;;
 
 	*) clear
              echo "
