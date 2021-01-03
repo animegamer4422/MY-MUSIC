@@ -34,6 +34,8 @@ cd ~/../usr/bin
 
 ln -s my-music mm
 
+ln -s my-musicupdate mmu
+
 echo "
 
 "
