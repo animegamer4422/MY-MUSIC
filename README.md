@@ -7,7 +7,7 @@ The Usage
 
 Just share the video to termux after installing the SCRIPT
 
-Or type my-music in termux
+Or type mm in termux rather than that it also has a file converter for video and audio.
 
 One line to install all
 
