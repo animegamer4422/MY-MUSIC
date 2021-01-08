@@ -1,5 +1,5 @@
 # MY-MUSIC
-my-music are a set of scripts created by me in order to download YOUTUBE videos easily it's made so that even normies can easily download files without seeing ads or installing malicious apps in a ANDROID smartphone by using only termux.
+my-music are a set of scripts created by me in order to download YOUTUBE videos easily it's made so that even normies can easily download Video and Audio files without seeing ads or installing malicious apps in a ANDROID smartphone by using only termux.
 
 IT USES OPEN SOURCE TOOLS WHICH ARE FFMPEG & YOUTUBE-DL
 
