@@ -1,6 +1,10 @@
 # MY-MUSIC
 my-music are a set of scripts created by me in order to download YOUTUBE videos easily it's made so that even normies can easily download Video and Audio files without seeing ads or installing malicious apps in a ANDROID smartphone by using only termux.
 
+Moreover it's power isn't just limited to Youtube if you want a list of sites where it works natively check the link below.
+
+https://ytdl-org.github.io/youtube-dl/supportedsites.html
+
 IT USES OPEN SOURCE TOOLS WHICH ARE FFMPEG & YOUTUBE-DL
 
 The Usage 
