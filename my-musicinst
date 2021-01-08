@@ -5,8 +5,8 @@ Master Let Me Setup Things For You. Just Wait Till I Am Finished
 
 "
 read -p 'PRESS ENTER TO CONTINUE'
-
-pkg install python -y
+apt update -y
+apt install python -y
 pip install --upgrade pip
 pip install --upgrade youtube-dl
 apt install atomicparsley ffmpeg -y
