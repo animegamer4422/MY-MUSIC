@@ -95,7 +95,7 @@ Now Commencing Download
 
 title=$(youtube-dl --get-title $URL)
 
-youtube-dl -f "bestvideo[height<=$QUALITY][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY/best" --add-metadata --embed-thumbnail --recode-video mp4 --newline -o "~/storage/shared/MY-MUSIC/%(title)s[$TAG].%(ext)s" "$URL"
+youtube-dl -f "bestvideo[height<=$QUALITY][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY/best]" --add-metadata --embed-thumbnail --recode-video mp4 --newline -o "~/storage/shared/MY-MUSIC/%(title)s[$TAG].%(ext)s" "$URL"
 
 exit;;
 
