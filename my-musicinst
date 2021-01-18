@@ -16,6 +16,12 @@ cd
 mkdir ~/storage/shared/MY-MUSIC
 mkdir ~/bin
 
+mkdir ~/.config
+
+touch ~/.config/youtube-dl.conf
+
+echo "-o "~/storage/shared/MY-MUSIC/%(title)s[$TAG].%(ext)s""
+
 cd
 
 cp ~/MY-MUSIC/my-* "/data/data/com.termux/files/usr/bin"
