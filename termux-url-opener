@@ -17,6 +17,8 @@ echo "
 	4) CUT AND SAVE
 
 	5) CUT AND SAVE AUDIO ONLY
+
+        6) ADD CUSTOM ARGS TO YOUTUBE-DL
 "
 
 echo ""
@@ -257,6 +259,31 @@ mv rename-me.mp3 ~/storage/shared/MY-MUSIC/"$filename.mp3"
 echo "
 
       INTERNAL/MY-MUSIC/$filename.mp3"
+exit;;
+
+             6) echo "
+
+CUSTOM ARGS
+
+"
+
+echo "
+
+Master Now Tell Me What Arguments You Want To Add
+
+"
+
+read -p "Add Your Arguments : " ARGS
+
+echo "
+
+Now Commencing Download
+
+"
+title=$(youtube-dl --get-title $URL)
+
+youtube-dl $(ARGS) -o "~/storage/shared/MY-MUSIC/%(title)s"[$TAG]".%(ext)s" $URL
+
 exit;;
 
 	*) clear
