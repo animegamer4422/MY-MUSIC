@@ -20,7 +20,7 @@ mkdir ~/.config
 
 touch ~/.config/youtube-dl.conf
 
-echo "-o "~/storage/shared/MY-MUSIC/%(title)s[$TAG].%(ext)s"" >> ~/.config/youtube-dl.conf
+echo "-o ~/storage/shared/MY-MUSIC/%(title)s.%(ext)s" >> ~/.config/youtube-dl.conf
 
 cd
 
