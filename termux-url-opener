@@ -282,7 +282,7 @@ Now Commencing Download
 "
 title=$(youtube-dl --get-title $URL)
 
-youtube-dl $(ARGS) -o "~/storage/shared/MY-MUSIC/%(title)s"[$TAG]".%(ext)s" $URL
+youtube-dl $(ARGS) $URL
 
 exit;;
 
