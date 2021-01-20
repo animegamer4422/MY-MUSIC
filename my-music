@@ -8,10 +8,15 @@ echo "CHOOSE A OPTION "
 echo "
     0) QUIT/EXIT
 	1) VIDEO + AUDIO
+
 	2) VIDEO ONLY
+
 	3) AUDIO ONLY
+
 	4) CUT AND SAVE
+
 	5) CUT AND SAVE AUDIO ONLY
+
         6) File Converter
 
 "
