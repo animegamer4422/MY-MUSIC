@@ -42,6 +42,9 @@ ln -s my-music mm
 
 ln -s my-musicupdate mmu
 
+ln -s my-musichelp mmh
+
+
 echo "
 
 "
