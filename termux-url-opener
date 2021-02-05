@@ -61,7 +61,7 @@ Now Commencing Download
 "
 
 
-youtube-dl -f "bestvideo[height<=$QUALITY][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 --newline -o "~/storage/shared/MY-MUSIC/%(title)s[$TAG].%(ext)s" "$URL"
+youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 --newline -o "~/storage/shared/MY-MUSIC/%(title)s[$TAG].%(ext)s" "$URL"
 
 exit;;
 
@@ -97,7 +97,7 @@ Now Commencing Download
 
 title=$(youtube-dl --get-title $URL)
 
-youtube-dl -f "bestvideo[height<=$QUALITY][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 --newline -o "~/storage/shared/MY-MUSIC/%(title)s[$TAG].%(ext)s" "$URL"
+youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 --newline -o "~/storage/shared/MY-MUSIC/%(title)s[$TAG].%(ext)s" "$URL"
 
 exit;;
 
@@ -180,7 +180,7 @@ Now Commencing Download
 
 "
 
-video=$(youtube-dl -g -f "bestvideo[height<="$QUALITY"]" "$URL")
+video=$(youtube-dl -g -f "bestvideo[height<="${QUALITY:=720}]" "$URL")
 
 audio=$(youtube-dl -g -f "bestaudio" "$URL")
 
@@ -281,6 +281,8 @@ Now Commencing Download
 
 "
 title=$(youtube-dl --get-title $URL)
+
+echo youtube-dl $(ARGS) $URL
 
 youtube-dl $(ARGS) $URL
 
