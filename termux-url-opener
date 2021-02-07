@@ -180,7 +180,7 @@ Now Commencing Download
 
 "
 
-video=$(youtube-dl -g -f "bestvideo[height<="${QUALITY:=720}]" "$URL")
+video=$(youtube-dl -g -f "bestvideo[height<="${QUALITY:=720}]"" "$URL")
 
 audio=$(youtube-dl -g -f "bestaudio" "$URL")
 
