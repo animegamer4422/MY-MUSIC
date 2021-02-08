@@ -25,7 +25,7 @@ echo ""
 
 read -p "OPTION:" OPTION
 
-case $OPTION in
+case ${OPTION:=1} in
 
     0) echo "EXITTING"
 sleep 1
