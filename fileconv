@@ -341,7 +341,7 @@ echo "
 
 read -p "END POINT : " EP
 
-for i in ~/storage/shared/convall/*.*; do ffmpeg -i ~/storage/shared/convall/converted/"$(basename "$i")" -ss $SP -to $EP ~/storage/shared/convall/"$(basename "$i")".mp3 ; done
+for i in ~/storage/shared/convall/*.*; do ffmpeg -i ~/storage/shared/convall/"$(basename "$i")" -ss $SP -to $EP ~/storage/shared/convall/converted/"$(basename "$i")".mp3 ; done
 
 echo "HAVE A GOOD DAY"
 exit;;
