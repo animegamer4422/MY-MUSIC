@@ -190,6 +190,12 @@ $(youtube-dl --get-title $URL)
 read -p 'NAME: ' TAG
 
 echo "
+Examples: 3:15:30.500 = 3 hours 15 mins 30 secs 500 milliseconds
+             6:15.300 = 6 min 15 sec 300 milliseconds
+                4 = 4 sec
+"
+
+echo "
 
 Master Now Give Me The Start Time
 
@@ -257,6 +263,12 @@ And To Help You This Is The Original Video Title
 echo $(youtube-dl --get-title $URL)
 
 read -p 'NAME: ' TAG
+
+echo "
+Examples: 3:15:30.500 = 3 hours 15 mins 30 secs 500 milliseconds
+             6:15.300 = 6 min 15 sec 300 milliseconds
+                4 = 4 sec
+"
 
 echo "
 
