@@ -203,7 +203,7 @@ ffmpeg -i rename-me.mkv -c copy rename.mp4
 
 rm rename-me.mkv
 
-mv rename.mp4 '$LOCATION'/"$filename.mp4"
+mv ~/rename.mp4 '$LOCATION'/"$filename.mp4"
 
 echo "
 
