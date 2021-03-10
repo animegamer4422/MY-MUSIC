@@ -199,11 +199,11 @@ filename="$TAG"
 
 ffmpeg -i $video -i $audio -ss $STARTTIME -to $ENDTIME rename-me.mkv
 
-ffmpeg -i rename-me.mkv -c copy rename.mp4
+ffmpeg -i rename-me.mkv -c copy '~/rename-me.mp4'
 
-rm rename-me.mkv
+rm ~/rename-me.mkv
 
-mv ~/rename.mp4 '$LOCATION'/"$filename.mp4"
+mv ~/rename-me.mp4 '$LOCATION'/"$filename.mp4"
 
 echo "
 
