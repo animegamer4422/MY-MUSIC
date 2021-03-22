@@ -13,6 +13,6 @@ Just share the video to termux after installing the SCRIPT
 
 Or type mm in termux rather than that it also has a file converter for offline video and audio conversion.
 
-One line to install all
+One line to install all Copy everything below and paste it in termux
 
 cd && rm -rf MY-MUSIC && pkg install git -y && git clone "https://github.com/animegamer4422/MY-MUSIC" && cd MY-MUSIC && chmod +x my-musicinst && termux-setup-storage && bash my-musicinst
