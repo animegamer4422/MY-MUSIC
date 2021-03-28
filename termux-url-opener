@@ -302,9 +302,7 @@ title=$(youtube-dl --get-title $URL)
 
 echo youtube-dl $(ARGS) $URL
 
-youtube-dl $(ARGS) $URL
-
-exit;;
+youtube-dl $(ARGS) $URL;;
 
              7) echo "
 
@@ -328,9 +326,7 @@ Now Commencing Download
 
 echo ffmpeg -i "$URL" $(ARGS)
 
-ffmpeg -i "$URL" $(ARGS)
-
-exit;;
+ffmpeg -i "$URL" $(ARGS);;
 
 	*) clear
              echo "
