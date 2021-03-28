@@ -21,6 +21,9 @@ echo "
 	5) CUT AND SAVE AUDIO ONLY
 
         6) ADD CUSTOM ARGS TO YOUTUBE-DL
+
+        7) ADD CUSTOM ARGS TO FFMPEG
+
 "
 
 echo ""
@@ -300,6 +303,32 @@ title=$(youtube-dl --get-title $URL)
 echo youtube-dl $(ARGS) $URL
 
 youtube-dl $(ARGS) $URL
+
+exit;;
+
+             7) echo "
+
+CUSTOM ARGS
+
+"
+
+echo "
+
+Master Now Tell Me What Arguments You Want To Add
+
+"
+
+read -p "Add Your Arguments : " ARGS
+
+echo "
+
+Now Commencing Download
+
+"
+
+echo ffmpeg -i "$URL" $(ARGS)
+
+ffmpeg -i "$URL" $(ARGS)
 
 exit;;
 
