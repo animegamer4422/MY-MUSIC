@@ -302,7 +302,11 @@ title=$(youtube-dl --get-title $URL)
 
 echo youtube-dl $ARGS $URL
 
-youtube-dl $ARGS $URL;;
+echo ""
+
+youtube-dl $ARGS $URL
+
+echo"";;
 
              7) echo "
 
