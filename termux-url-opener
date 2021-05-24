@@ -189,6 +189,8 @@ echo "
 
 Now Commencing Download
 
+rm rename*
+
 "
 cd
 
