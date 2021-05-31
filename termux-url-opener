@@ -25,9 +25,12 @@ echo "
         7) ADD CUSTOM ARGS TO FFMPEG
 
 	8) DOWNLOAD WITH SUBS
-"
+" && CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")" && Video="$(youtube-dl --get-filename -o "%(title)s%(uploader)s" "$URL")"
 
-echo ""
+
+echo "
+$Video
+"
 
 read -p "OPTION:" OPTION
 
@@ -67,7 +70,7 @@ Now Commencing Download
 "
 
 
-youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s[$TAG] %(uploader)s.%(ext)s" "$URL"
+youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s[$TAG] $CREATOR.%(ext)s" "$URL"
 
 exit;;
 
@@ -103,7 +106,7 @@ Now Commencing Download
 
 title=$(youtube-dl --get-title $URL)
 
-youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s [$TAG] %(uploader)s.%(ext)s" "$URL"
+youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s [$TAG] $CREATOR.%(ext)s" "$URL"
 
 exit;;
 
@@ -128,7 +131,7 @@ Now Commencing Download
 "
 title=$(youtube-dl --get-title $URL)
 
-youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 --newline -o "$LOCATION/%(title)s "[$TAG]" %(uploader)s.%(ext)s" $URL
+youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 --newline -o "$LOCATION/%(title)s "[$TAG]" $CREATOR.%(ext)s" $URL
 
 exit;;
 
@@ -197,8 +200,6 @@ video=$(youtube-dl -g -f "bestvideo[height<="${QUALITY:=720}]"" "$URL")
 
 audio=$(youtube-dl -g -f "bestaudio" "$URL")
 
-CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
-
 filename="$TAG $CREATOR"
 
 ffmpeg -i $video -i $audio -ss $STARTTIME -to $ENDTIME rename-me.mkv
@@ -259,10 +260,6 @@ Now Commencing Download"
 audio=$(youtube-dl -g -f "bestaudio" "$URL")
 
 title=$(youtube-dl --get-title "$URL")
-
-#thumbnail=$(youtube-dl --get-thumbnail)
-
-CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
 
 filename="$TAG $CREATOR"
 
