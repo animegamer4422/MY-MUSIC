@@ -29,9 +29,7 @@ echo "
 
 echo ""
 
-read -p "OPTION:" OPTION
-
-CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
+read -p "OPTION:"OPTION
 
 case ${OPTION:=1} in
 
@@ -69,7 +67,7 @@ Now Commencing Download
 "
 
 
-youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s[$TAG] $CREATOR.%(ext)s" "$URL"
+youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s[$TAG] %(uploader)s.%(ext)s" "$URL"
 
 exit;;
 
@@ -105,7 +103,7 @@ Now Commencing Download
 
 title=$(youtube-dl --get-title $URL)
 
-youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s[$TAG].%(ext)s" "$URL"
+youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s[$TAG] %(uploader)s.%(ext)s" "$URL"
 
 exit;;
 
@@ -130,7 +128,7 @@ Now Commencing Download
 "
 title=$(youtube-dl --get-title $URL)
 
-youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 --newline -o "$LOCATION/%(title)s"[$TAG]" $CREATOR.%(ext)s" $URL
+youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 --newline -o "$LOCATION/%(title)s"[$TAG]" %(uploader)s.%(ext)s" $URL
 
 exit;;
 
@@ -199,7 +197,7 @@ video=$(youtube-dl -g -f "bestvideo[height<="${QUALITY:=720}]"" "$URL")
 
 audio=$(youtube-dl -g -f "bestaudio" "$URL")
 
-#title=$(youtube-dl --get-title $URL)
+CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
 
 filename="$TAG $CREATOR"
 
@@ -266,6 +264,8 @@ audio=$(youtube-dl -g -f "bestaudio" "$URL")
 title=$(youtube-dl --get-title "$URL")
 
 #thumbnail=$(youtube-dl --get-thumbnail)
+
+CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
 
 filename="$TAG $CREATOR"
 
