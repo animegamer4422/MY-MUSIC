@@ -4,8 +4,6 @@ LOCATION="~/storage/shared/MY-MUSIC"
 
 x=1
 
-CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
-
 while [ $x=1 ] 
 do
 echo "CHOOSE A OPTION "
@@ -32,6 +30,8 @@ echo "
 echo ""
 
 read -p "OPTION:" OPTION
+
+CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
 
 case ${OPTION:=1} in
 
