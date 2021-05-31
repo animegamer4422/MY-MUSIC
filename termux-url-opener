@@ -24,7 +24,7 @@ echo "
 
         7) ADD CUSTOM ARGS TO FFMPEG
 
-	8) Download With Subs
+	8) DOWNLOAD WITH SUBS
 "
 
 echo ""
@@ -67,7 +67,7 @@ Now Commencing Download
 "
 
 
-youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 --newline -o "$LOCATION/%(title)s[$TAG].%(ext)s" "$URL"
+youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s[$TAG].%(ext)s" "$URL"
 
 exit;;
 
@@ -103,7 +103,7 @@ Now Commencing Download
 
 title=$(youtube-dl --get-title $URL)
 
-youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 --newline -o "$LOCATION/%(title)s[$TAG].%(ext)s" "$URL"
+youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s[$TAG].%(ext)s" "$URL"
 
 exit;;
 
@@ -346,7 +346,7 @@ read -p "Choose Subs Language : " LANG
 
 read -p "TAG : " TAG
 
-youtube-dl --write-sub --sub-lang "$lang" -o "~/storage/shared/MY-MUSIC/%(title)s"[$TAG]".%(ext)s" $URL
+youtube-dl --write-sub --sub-lang "$lang"  --add-metadata --embed-thumbnail --recode-video mp4 -o "~/storage/shared/MY-MUSIC/%(title)s"[$TAG]".%(ext)s" $URL
 
 exit;;
 	*) clear
