@@ -346,7 +346,7 @@ read -p "Choose Subs Language : " LANG
 
 read -p "TAG : " TAG
 
-youtube-dl --embed-sub --sub-lang "$lang"  --add-metadata -o "~/storage/shared/MY-MUSIC/%(title)s"[$TAG]".%(ext)s" $URL
+youtube-dl --write-sub --convert-subs srt --sub-lang "$lang"  --add-metadata -o "~/storage/shared/MY-MUSIC/%(title)s"[$TAG]".%(ext)s" $URL
 
 exit;;
 	*) clear
