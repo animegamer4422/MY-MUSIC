@@ -1,0 +1,359 @@
+URL=$1
+
+LOCATION="~/storage/shared/MY-MUSIC"
+
+x=1
+
+while [ $x=1 ] 
+do
+echo "CHOOSE A OPTION "
+
+echo "
+    0) QUIT/EXIT
+	1) VIDEO + AUDIO
+
+	2) VIDEO ONLY
+
+	3) AUDIO ONLY
+
+	4) CUT AND SAVE
+
+	5) CUT AND SAVE AUDIO ONLY
+
+        6) ADD CUSTOM ARGS TO YOUTUBE-DL
+
+        7) ADD CUSTOM ARGS TO FFMPEG
+
+	8) Download With Subs
+"
+
+echo ""
+
+read -p "OPTION:" OPTION
+
+case ${OPTION:=1} in
+
+    0) echo "EXITTING"
+sleep 1
+exit;;
+
+	1) echo "
+
+VIDEO + AUDIO
+
+"
+echo "Master Tell Me The Quality You Want To Download The Video In
+
+"
+
+echo "e.g. 1080 720 480 360 240 144
+
+"
+
+read -p 'QUALITY : ' QUALITY
+
+echo "
+
+Master Now Tell Me What You Want To Tag To The Name Of The Video
+
+"
+
+read -p "TAG (NO SPACE's): " TAG
+
+echo "
+
+Now Commencing Download
+
+"
+
+
+youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 --newline -o "$LOCATION/%(title)s[$TAG].%(ext)s" "$URL"
+
+exit;;
+
+
+	2) echo "
+
+VIDEO ONLY
+
+"
+echo "Master Tell Me The Quality You Want To Download The Video In
+
+"
+
+echo "e.g. 1080 720 480 360 240 144
+
+"
+
+read -p 'QUALITY : ' QUALITY
+
+echo "
+
+Master Now Tell Me What You Want To Tag To The Name Of The Video
+
+"
+
+read -p "TAG (NO SPACE's): " TAG
+
+echo "
+
+Now Commencing Download
+
+"
+
+title=$(youtube-dl --get-title $URL)
+
+youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 --newline -o "$LOCATION/%(title)s[$TAG].%(ext)s" "$URL"
+
+exit;;
+
+	3) echo "
+
+AUDIO ONLY
+
+"
+
+echo "
+
+Master Now Tell Me What You Want To Tag To The Name Of The Video
+
+"
+
+read -p "TAG (NO SPACE's) : " TAG
+
+echo "
+
+Now Commencing Download
+
+"
+title=$(youtube-dl --get-title $URL)
+
+youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 --newline -o "$LOCATION/%(title)s"[$TAG]".%(ext)s" $URL
+
+exit;;
+
+	4) echo "
+
+CUT AND SAVE
+
+"
+echo "
+
+Master Tell Me The Quality You Want To Download The Video In
+
+"
+
+echo "e.g. 1080 720 480 360 240 144
+
+"
+
+read -p 'QUALITY : ' QUALITY
+
+echo "
+
+Master Now Tell Me What You Want To Name The Video
+
+"
+echo "And To Help You This Is The Original Video Title"
+
+echo "
+
+$(youtube-dl --get-title "$URL")
+
+"
+
+read -p 'NAME: ' TAG
+
+echo "
+Examples: 3:15:30.500 = 3 hours 15 mins 30 secs 500 milliseconds
+             6:15.300 = 6 min 15 sec 300 milliseconds
+                4 = 4 sec
+"
+
+echo "
+
+Master Now Give Me The Start Time
+
+"
+
+read -p 'HH:MM:SS.MLS : ' STARTTIME
+
+echo "
+
+Master Now Give Me The END Time
+
+"
+
+read -p 'HH:MM:SS.MLS : ' ENDTIME
+
+echo "
+
+Now Commencing Download
+
+"
+cd
+
+video=$(youtube-dl -g -f "bestvideo[height<="${QUALITY:=720}]"" "$URL")
+
+audio=$(youtube-dl -g -f "bestaudio" "$URL")
+
+#title=$(youtube-dl --get-title $URL)
+
+filename="$TAG"
+
+ffmpeg -i $video -i $audio -ss $STARTTIME -to $ENDTIME rename-me.mkv
+
+ffmpeg -i rename-me.mkv -c copy rename-me.mp4
+
+rm rename-me.mkv
+
+mv rename-me.mp4 ~/storage/shared/MY-MUSIC/"$filename.mp4"
+
+echo "
+
+      INTERNAL/MY-MUSIC/$filename.mp4"
+exit;;
+
+	5) echo "
+
+CUT AND SAVE AUDIO ONLY
+
+"
+echo "
+
+Master Now Tell Me What You Want To Name The Video
+
+"
+echo "
+
+And To Help You This Is The Original Video Title
+
+"
+echo $(youtube-dl --get-title "$URL")
+
+read -p 'NAME: ' TAG
+
+echo "
+Examples: 3:15:30.500 = 3 hours 15 mins 30 secs 500 millisecs
+             6:15.300 = 6 min 15 sec 300 millisecs
+                4 = 4 sec
+"
+
+echo "
+
+Master Now Give Me The Start Time
+
+"
+
+read -p 'HH:MM:SS.MLS : ' STARTTIME
+
+echo "
+
+Master Now Give Me The END Time
+
+"
+
+read -p 'HH:MM:SS.MLS : ' ENDTIME
+
+echo "
+
+Now Commencing Download"
+
+audio=$(youtube-dl -g -f "bestaudio" "$URL")
+
+title=$(youtube-dl --get-title "$URL")
+
+#thumbnail=$(youtube-dl --get-thumbnail)
+
+filename="$TAG"
+
+ffmpeg  -i "$audio" -ss $STARTTIME -to $ENDTIME rename-me.mkv
+
+ffmpeg  -i rename-me.mkv rename-me.mp3
+
+rm rename-me.mkv
+
+mv ~/rename-me.mp3 ~/storage/shared/MY-MUSIC/"$filename.mp3"
+
+echo "
+
+      INTERNAL/MY-MUSIC/$filename.mp3"
+exit;;
+
+             6) echo "
+
+CUSTOM ARGS
+
+"
+
+echo "
+
+Master Now Tell Me What Arguments You Want To Add
+
+"
+
+read -p "Add Your Arguments : " ARGS
+
+echo "
+
+Now Commencing Download
+
+"
+title=$(youtube-dl --get-title $URL)
+
+echo youtube-dl $ARGS $URL
+
+echo ""
+
+youtube-dl $ARGS $URL
+
+echo"";;
+
+             7) echo "
+
+CUSTOM ARGS
+
+"
+
+echo "
+
+Master Now Tell Me What Arguments You Want To Add
+
+"
+
+read -p "Add Your Arguments : " ARGS
+
+echo "
+
+Now Commencing Download
+
+"
+
+echo ffmpeg -i "$URL" $ARGS
+
+ffmpeg -i "$URL" $(ARGS);;
+
+	8) echo "
+		Download With Subs
+"
+youtube-dl --list-subs $URL
+
+echo ""
+echo "Ex: en ru"
+echo ""
+
+read -p "Choose Subs Language : " LANG
+
+read -p "TAG : " TAG
+
+youtube-dl --write-sub --sub-lang "$lang" -o "~/storage/shared/MY-MUSIC/%(title)s"[$TAG]".%(ext)s" $URL
+
+exit;;
+	*) clear
+             echo "
+
+THATS NOT AN OPTION PLEASE TRY AGAIN
+
+";;
+esac
+done
