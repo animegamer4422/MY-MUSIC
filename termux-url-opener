@@ -103,7 +103,7 @@ Now Commencing Download
 
 title=$(youtube-dl --get-title $URL)
 
-youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s[$TAG] %(uploader)s.%(ext)s" "$URL"
+youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s [$TAG] %(uploader)s.%(ext)s" "$URL"
 
 exit;;
 
@@ -128,7 +128,7 @@ Now Commencing Download
 "
 title=$(youtube-dl --get-title $URL)
 
-youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 --newline -o "$LOCATION/%(title)s"[$TAG]" %(uploader)s.%(ext)s" $URL
+youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 --newline -o "$LOCATION/%(title)s "[$TAG]" %(uploader)s.%(ext)s" $URL
 
 exit;;
 
@@ -209,9 +209,6 @@ rm rename-me.mkv
 
 mv rename-me.mp4 ~/storage/shared/MY-MUSIC/"$filename.mp4"
 
-echo "
-
-      INTERNAL/MY-MUSIC/$filename.mp4"
 exit;;
 
 	5) echo "
