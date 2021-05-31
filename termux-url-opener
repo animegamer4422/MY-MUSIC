@@ -338,15 +338,30 @@ ffmpeg -i "$URL" $(ARGS);;
 "
 youtube-dl --list-subs $URL
 
+
+echo "
+
+Master Tell Me The Quality You Want To Download The Video In
+
+"
+
+echo "e.g. 1080 720 480 360 240 144
+
+"
+
+read -p 'QUALITY : ' QUALITY
+
 echo ""
 echo "Ex: en ru"
 echo ""
 
 read -p "Choose Subs Language : " LANG
 
+echo ""
+
 read -p "TAG : " TAG
 
-youtube-dl --write-sub --convert-subs srt --sub-lang "$lang"  --add-metadata -o "~/storage/shared/MY-MUSIC/%(title)s"[$TAG]".%(ext)s" $URL
+youtube-dl --write-sub --convert-subs srt --sub-lang "$lang"  -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata -o "~/storage/shared/MY-MUSIC/%(title)s"[$TAG]".%(ext)s" $URL
 
 exit;;
 	*) clear
