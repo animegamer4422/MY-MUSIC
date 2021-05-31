@@ -4,6 +4,8 @@ LOCATION="~/storage/shared/MY-MUSIC"
 
 x=1
 
+CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
+
 while [ $x=1 ] 
 do
 echo "CHOOSE A OPTION "
@@ -67,7 +69,7 @@ Now Commencing Download
 "
 
 
-youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s[$TAG].%(ext)s" "$URL"
+youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s[$TAG] $CREATOR.%(ext)s" "$URL"
 
 exit;;
 
@@ -128,7 +130,7 @@ Now Commencing Download
 "
 title=$(youtube-dl --get-title $URL)
 
-youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 --newline -o "$LOCATION/%(title)s"[$TAG]".%(ext)s" $URL
+youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 --newline -o "$LOCATION/%(title)s"[$TAG]" $CREATOR.%(ext)s" $URL
 
 exit;;
 
@@ -199,7 +201,7 @@ audio=$(youtube-dl -g -f "bestaudio" "$URL")
 
 #title=$(youtube-dl --get-title $URL)
 
-filename="$TAG"
+filename="$TAG $CREATOR"
 
 ffmpeg -i $video -i $audio -ss $STARTTIME -to $ENDTIME rename-me.mkv
 
@@ -265,7 +267,7 @@ title=$(youtube-dl --get-title "$URL")
 
 #thumbnail=$(youtube-dl --get-thumbnail)
 
-filename="$TAG"
+filename="$TAG $CREATOR"
 
 ffmpeg  -i "$audio" -ss $STARTTIME -to $ENDTIME rename-me.mkv
 
@@ -361,7 +363,7 @@ echo ""
 
 read -p "TAG : " TAG
 
-youtube-dl --write-sub --convert-subs srt --sub-lang "$LANG"  -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata -o "~/storage/shared/MY-MUSIC/%(title)s"[$TAG]".%(ext)s" $URL
+youtube-dl --write-sub --convert-subs srt --sub-lang "$LANG"  -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata -o "~/storage/shared/MY-MUSIC/%(title)s"[$TAG]" $CREATOR.%(ext)s" $URL
 
 exit;;
 	*) clear
