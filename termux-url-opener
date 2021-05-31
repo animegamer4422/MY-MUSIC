@@ -29,7 +29,7 @@ echo "
 
 echo ""
 
-read -p "OPTION:"OPTION
+read -p "OPTION:" OPTION
 
 case ${OPTION:=1} in
 
