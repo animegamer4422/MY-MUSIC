@@ -204,10 +204,9 @@ audio=$(youtube-dl -g -f "bestaudio" "$URL")
 
 filename="$Name $CREATOR"
 
-echo $filename
+echo "$filename
 
-sleep 5
-
+"
 ffmpeg -i $video -i $audio -ss $STARTTIME -to $ENDTIME rename-me.mkv
 
 ffmpeg -i rename-me.mkv -c copy rename-me.mp4
