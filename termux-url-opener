@@ -70,7 +70,7 @@ Now Commencing Download
 "
 
 
-youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s [$TAG] $CREATOR.%(ext)s" "$URL"
+youtube-dl -f "bestvideo[height<=${QUALITY:=1080}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s [$TAG] $CREATOR.%(ext)s" "$URL"
 
 exit;;
 
@@ -106,7 +106,7 @@ Now Commencing Download
 
 title=$(youtube-dl --get-title $URL)
 
-youtube-dl -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s [$TAG] $CREATOR.%(ext)s" "$URL"
+youtube-dl -f "bestvideo[height<=${QUALITY:=1080}][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s [$TAG] $CREATOR.%(ext)s" "$URL"
 
 exit;;
 
@@ -350,7 +350,7 @@ echo "e.g. 1080 720 480 360 240 144
 
 "
 
-read -p 'QUALITY : ' QUALITY
+read -p 'QUALITY [DEFAULT = 1080] : ' QUALITY
 
 echo ""
 echo "Ex: en ru"
