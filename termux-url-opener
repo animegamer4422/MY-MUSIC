@@ -161,7 +161,7 @@ echo "And To Help You This Is The Original Video Title"
 
 echo "
 
-$(youtube-dl --get-title "$URL")
+$Video
 
 "
 
@@ -198,7 +198,7 @@ Now Commencing Download
 "
 cd
 
-video=$(youtube-dl -g -f "bestvideo[height<="${QUALITY:=720}]"" "$URL")
+video=$(youtube-dl -g -f "bestvideo[height<="${QUALITY:=1080}]"" "$URL")
 
 audio=$(youtube-dl -g -f "bestaudio" "$URL")
 
