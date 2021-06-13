@@ -157,7 +157,7 @@ echo "
 Master Now Tell Me What You Want To Name The Video
 
 "
-echo "And To Help You This Is The Original Video Title"
+echo "And To Help You This Is The Original Video Title And It's Also The default Name"
 
 echo "
 
