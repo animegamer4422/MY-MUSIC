@@ -30,7 +30,7 @@ echo "
 $Video
 "
 
-read -p "OPTION: [DEFAULT=1]" OPTION
+read -p "OPTION [DEFAULT=1] : " OPTION
 
 case ${OPTION:=1} in
 
