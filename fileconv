@@ -428,6 +428,12 @@ read -p "INPUT A DURATION : " DURATION
 
 for i in ~/storage/shared/convall/*.*; do ffmpeg -i ~/storage/shared/convall/"$(basename "$i")" -c copy -map 0 -segment_time $DURATION -f segment ~/storage/shared/convall/converted/"$(basename "$i"%03d).mp4" ; done
 
+cd ~/storage/shared/convall/converted/
+
+mkdir whatsapp
+
+for i in *.mp4 ; do x=$((x + 1)) ; echo "$i" ; ffmpeg -i "$i" "whatsapp/$x.mp4" ; done
+
 echo "HAVE A GOOD DAY"
 exit;;
 
