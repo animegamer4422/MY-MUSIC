@@ -2,9 +2,7 @@ URL=$1
 
 LOCATION="~/storage/shared/MY-MUSIC"
 
-x=1
-
-while [ $x=1 ] 
+while :
 do
 echo "CHOOSE A OPTION "
 
@@ -32,7 +30,7 @@ echo "
 $Video
 "
 
-read -p "OPTION:" OPTION
+read -p "OPTION: [DEFAULT=1]" OPTION
 
 case ${OPTION:=1} in
 
@@ -70,7 +68,7 @@ Now Commencing Download
 "
 
 
-youtube-dl -f "bestvideo[height<=${QUALITY:=1080}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s ['$TAG'] $CREATOR.%(ext)s" "$URL"
+youtube-dl -f "bestvideo[height<=${QUALITY:=1080}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s [$TAG] $CREATOR.%(ext)s" "$URL"
 
 exit;;
 
@@ -106,7 +104,7 @@ Now Commencing Download
 
 title=$(youtube-dl --get-title $URL)
 
-youtube-dl -f "bestvideo[height<=${QUALITY:=1080}][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s ['$TAG'] $CREATOR.%(ext)s" "$URL"
+youtube-dl -f "bestvideo[height<=${QUALITY:=1080}][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s [$TAG] $CREATOR.%(ext)s" "$URL"
 
 exit;;
 
@@ -131,7 +129,7 @@ Now Commencing Download
 "
 title=$(youtube-dl --get-title $URL)
 
-youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 -o "$LOCATION/%(title)s "['$TAG']" $CREATOR.%(ext)s" $URL
+youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 -o "$LOCATION/%(title)s "[$TAG]" $CREATOR.%(ext)s" $URL
 
 exit;;
 
