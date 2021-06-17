@@ -430,6 +430,8 @@ for i in ~/storage/shared/convall/*.*; do ffmpeg -i ~/storage/shared/convall/"$(
 
 cd ~/storage/shared/convall/converted/
 
+rm *
+
 mkdir whatsapp
 
 for i in *.mp4 ; do x=$((x + 1)) ; echo "$i" ; ffmpeg -i "$i" "whatsapp/$x.mp4" ; done
