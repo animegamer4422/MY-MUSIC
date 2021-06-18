@@ -23,9 +23,7 @@ ls -a ~/storage/shared/convall/ | grep *.*
 
 #for i in ~/storage/shared/convall/*.* ; do echo "$(basename "$i")"  ; done
 
-x=1
-
-while [ x=1 ] 
+while :
 do
 
 echo "
