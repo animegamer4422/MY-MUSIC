@@ -436,7 +436,11 @@ for i in *.mp4 ; do x=$((x + 1)) ; echo "$i" ; ffmpeg -i "$i" "whatsapp/$x.mp4" 
 
 rm *
 
-echo "HAVE A GOOD DAY"
+echo "
+
+HAVE A GOOD DAY
+
+"
 exit;;
 
 *) clear
