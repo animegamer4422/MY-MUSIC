@@ -432,6 +432,8 @@ cd ~/storage/shared/convall/converted/
 
 mkdir whatsapp
 
+rm whatsapp/*
+
 for i in *.mp4 ; do x=$((x + 1)) ; echo "$i" ; ffmpeg -i "$i" "whatsapp/$x.mp4" ; done
 
 rm *
