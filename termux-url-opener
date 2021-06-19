@@ -350,6 +350,8 @@ echo "e.g. 1080 720 480 360 240 144
 
 read -p 'QUALITY [DEFAULT = 1080] : ' QUALITY
 
+youtube-dl --list-subs "$URL"
+
 echo ""
 echo "Ex: en ru"
 echo ""
