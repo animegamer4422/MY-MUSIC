@@ -328,9 +328,11 @@ Now Commencing Download
 
 "
 
-echo ffmpeg -i "$URL" $ARGS
+cd ~/storage/shared/MY-MUSIC/
 
-ffmpeg -i "$URL" $(ARGS);;
+echo "ffmpeg -i "$URL" $ARGS"
+
+ffmpeg -i "$URL" $ARGS;;
 
 	8) echo "
 		Download With Subs
@@ -356,7 +358,7 @@ echo ""
 echo "Ex: en ru"
 echo ""
 
-read -p "Choose Subs Language : " LANG
+read -p "Choose Subs Language From Above list : " LANG
 
 echo ""
 
