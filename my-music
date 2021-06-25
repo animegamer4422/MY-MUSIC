@@ -428,7 +428,7 @@ echo ""
 
 read -p "TAG : " TAG
 
-&& CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
+CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
 
 youtube-dl --write-sub --convert-subs srt --sub-lang "$LANG"  -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata -o "~/storage/shared/MY-MUSIC/%(title)s [$TAG] $CREATOR.%(ext)s" $URL
 
