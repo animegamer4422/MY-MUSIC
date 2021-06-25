@@ -47,7 +47,8 @@ Master Input The MRL you Want To download
 
 read -p 'MRL(VIDEO LINK) : ' URL
 
-echo "Master Tell Me The Quality You Want To Download The Video In
+echo "
+Master Tell Me The Quality You Want To Download The Video In
 
 "
 
