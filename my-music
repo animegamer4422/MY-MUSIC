@@ -85,8 +85,7 @@ exit;;
 VIDEO ONLY
 
 "
-echo 
-"
+echo "
 Master Input The MRL you Want To download
 "
 
@@ -128,8 +127,7 @@ AUDIO ONLY
 
 "
 
-echo 
-"
+echo "
 Master Input The MRL you Want To download
 "
 
@@ -161,8 +159,7 @@ CUT AND SAVE
 
 "
 
-echo 
-"
+echo "
 Master Input The MRL you Want To download
 "
 
@@ -254,8 +251,7 @@ CUT AND SAVE AUDIO ONLY
 
 "
 
-echo 
-"
+echo "
 Master Input The MRL you Want To download
 "
 
@@ -328,8 +324,7 @@ CUSTOM ARGS
 
 "
 
-echo 
-"
+echo "
 Master Input The MRL you Want To download
 "
 
@@ -364,8 +359,7 @@ CUSTOM ARGS
 
 "
 
-echo 
-"
+echo "
 Master Input The MRL you Want To download
 "
 
@@ -394,8 +388,7 @@ ffmpeg -i "$URL" $ARGS;;
 	8) echo "
 		Download With Subs
 "
-echo 
-"
+echo "
 Master Input The MRL you Want To download
 "
 
