@@ -1,3 +1,6 @@
+#DEPENDENCIES
+#ffmpeg youtube-dl atomicparsley python-pip
+
 
 echo "
 
