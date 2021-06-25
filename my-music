@@ -21,7 +21,7 @@ echo "
         7) ADD CUSTOM ARGS TO FFMPEG
 
 	8) DOWNLOAD WITH SUBS
-" && CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")" && Video="$(youtube-dl --get-filename -o "%(title)s%(uploader)s" "$URL")"
+"
 
 
 echo "
@@ -72,6 +72,8 @@ Now Commencing Download
 
 "
 
+CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
+
 
 youtube-dl -f "bestvideo[height<=${QUALITY:=1080}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s [$TAG] $CREATOR.%(ext)s" "$URL"
 
@@ -114,7 +116,7 @@ Now Commencing Download
 
 "
 
-title=$(youtube-dl --get-title $URL)
+CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
 
 youtube-dl -f "bestvideo[height<=${QUALITY:=1080}][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s [$TAG] $CREATOR.%(ext)s" "$URL"
 
@@ -146,7 +148,8 @@ echo "
 Now Commencing Download
 
 "
-title=$(youtube-dl --get-title $URL)
+
+CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
 
 youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 -o "$LOCATION/%(title)s "[$TAG]" $CREATOR.%(ext)s" $URL
 
@@ -223,6 +226,9 @@ Now Commencing Download
 "
 cd
 
+
+CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
+
 video=$(youtube-dl -g -f "bestvideo[height<="${QUALITY:=1080}]"" "$URL")
 
 audio=$(youtube-dl -g -f "bestaudio" "$URL")
@@ -294,6 +300,8 @@ read -p 'HH:MM:SS.MLS : ' ENDTIME
 echo "
 
 Now Commencing Download"
+
+CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
 
 audio=$(youtube-dl -g -f "bestaudio" "$URL")
 
@@ -419,6 +427,8 @@ read -p "Choose Subs Language From Above list : " LANG
 echo ""
 
 read -p "TAG : " TAG
+
+&& CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
 
 youtube-dl --write-sub --convert-subs srt --sub-lang "$LANG"  -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata -o "~/storage/shared/MY-MUSIC/%(title)s [$TAG] $CREATOR.%(ext)s" $URL
 
