@@ -58,7 +58,7 @@ Just share the video to termx.
 
 Or type my-music or mm in termux
 
-AND LASTLY type 'my-musichelp or mmh' to see this help/usage message and type 'my-musicupdate' to reinstall/update the script
+AND LASTLY type 'my-musichelp or mmh' to see this help/usage message and type 'my-musicupdate' or 'mmu' to reinstall/update the script
 "
 echo "Just share the video to termux.
 "
