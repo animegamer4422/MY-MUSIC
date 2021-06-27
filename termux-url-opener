@@ -205,9 +205,9 @@ filename="$Name $CREATOR"
 echo "$filename
 
 "
-ffmpeg -i $video -i $audio -ss $STARTTIME -to $ENDTIME rename-me.mkv
+ffmpeg -i $video -i $audio -ss $STARTTIME -to $ENDTIME -c copy rename-me.mkv
 
-ffmpeg -i rename-me.mkv -c copy rename-me.mp4
+ffmpeg -i rename-me.mkv rename-me.mp4
 
 rm rename-me.mkv
 
@@ -266,7 +266,7 @@ title=$(youtube-dl --get-title "$URL")
 
 filename="$TAG $CREATOR"
 
-ffmpeg  -i "$audio" -ss $STARTTIME -to $ENDTIME rename-me.mkv
+ffmpeg  -i "$audio" -ss $STARTTIME -to $ENDTIME -c copy rename-me.mkv
 
 ffmpeg  -i rename-me.mkv rename-me.mp3
 
