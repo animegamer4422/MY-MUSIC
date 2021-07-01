@@ -23,7 +23,7 @@ echo "
         7) ADD CUSTOM ARGS TO FFMPEG
 
 	8) DOWNLOAD WITH SUBS
-" && CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")" && Video="$(youtube-dl --get-filename -o "%(title)s% by (uploader)s" "$URL")"
+" && CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")" && Video="$(youtube-dl --get-filename -o "%(title)s% by %(uploader)s" "$URL")"
 
 
 echo "
