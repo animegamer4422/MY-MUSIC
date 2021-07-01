@@ -9,6 +9,8 @@ IT USES OPEN SOURCE TOOLS WHICH ARE FFMPEG & YOUTUBE-DL
 
 The Usage 
 
+'https://raw.githubusercontent.com/animegamer4422/MY-MUSIC/master/TERMUX%20MY-MUSIC.jpg'
+
 Just share the video to termux after installing the SCRIPT
 
 Or type mm in termux rather than that it also has a file converter for offline video and audio conversion.
