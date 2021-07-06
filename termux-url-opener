@@ -337,7 +337,6 @@ ffmpeg -i "$URL" $ARGS;;
 	8) echo "
 		Download With Subs
 "
-youtube-dl --list-subs $URL
 
 
 echo "
