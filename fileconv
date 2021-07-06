@@ -424,6 +424,25 @@ Example 3:30:25.500 = 3 hours 30 mins 25 secs 500 millisecs
 
 read -p "INPUT A DURATION : " DURATION
 
+if [ -d ~/storage/shared/convall/converted ]
+then
+        echo "
+
+FOLDER 'converted' EXISTS STOPPING THE CREATION
+
+"
+
+else
+        echo "
+THE FOLDER 'converted' DOESN'T EXISTS
+
+" && mkdir ~/storage/shared/convall/converted && echo "
+
+FOLDER 'converted' HAS BEEN CREATED SUCCESSFULLY
+
+"
+fi
+
 for i in ~/storage/shared/convall/*.*; do ffmpeg -i ~/storage/shared/convall/"$(basename "$i")" -c copy -map 0 -segment_time $DURATION -f segment ~/storage/shared/convall/converted/"$(basename "$i"%03d).mp4" ; done
 
 cd ~/storage/shared/convall/converted/
