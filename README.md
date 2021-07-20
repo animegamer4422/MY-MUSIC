@@ -1,5 +1,7 @@
 # MY-MUSIC
-my-music are a set of scripts created by me in order to download YOUTUBE videos easily it's made so that even normies can easily download Video and Audio files without seeing ads or installing malicious apps in a ANDROID smartphone by using only termux. BTW it can run on Linux System.
+my-music are a set of scripts created by me in order to download YOUTUBE videos easily it's made so that even normies can easily download Video and Audio files without seeing ads or installing malicious apps in a ANDROID smartphone by using only termux.
+
+`BTW it can run on Linux System but necessary dependencies need to be installed through your systems respective package managers`
 
 Moreover it's power isn't just limited to Youtube if you want a list of sites where it works natively check the link below.
 
