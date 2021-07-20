@@ -19,7 +19,7 @@ If you are on a Linux System (for non-debian based systems use your respective p
 
 Or type mm in termux rather than that it also has a file converter for offline video and audio conversion.
 
-One line to install all.
+One line to install all in termux or debian terminal
 Copy everything below and paste it in termux or terminal
 
 ```
