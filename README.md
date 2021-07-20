@@ -1,5 +1,5 @@
 # MY-MUSIC
-my-music are a set of scripts created by me in order to download YOUTUBE videos easily it's made so that even normies can easily download Video and Audio files without seeing ads or installing malicious apps in a ANDROID smartphone by using only termux.
+my-music are a set of scripts created by me in order to download YOUTUBE videos easily it's made so that even normies can easily download Video and Audio files without seeing ads or installing malicious apps in a ANDROID smartphone by using only termux. BTW it can run on Linux System.
 
 Moreover it's power isn't just limited to Youtube if you want a list of sites where it works natively check the link below.
 
@@ -11,10 +11,14 @@ The Usage
 
 Just share the video to termux after installing the SCRIPT
 
+Or
+
+If you are on a Linux System (for non-debian based systems use your respective package manager to install the dependencies)
+
 Or type mm in termux rather than that it also has a file converter for offline video and audio conversion.
 
 One line to install all.
-Copy everything below and paste it in termux
+Copy everything below and paste it in termux or terminal
 
 ```
 cd && rm -rf MY-MUSIC && apt update && apt install git -y && git clone "https://github.com/animegamer4422/MY-MUSIC" && cd MY-MUSIC && chmod +x my-musicinst && termux-setup-storage && bash my-musicinst
