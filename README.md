@@ -24,4 +24,5 @@ Copy everything below and paste it in termux or terminal
 *If you are on a Linux System (for non-debian based systems use your respective package manager to install the dependencies)*
 
 
-```cd && rm -rf MY-MUSIC && apt update && apt install git -y && git clone "https://github.com/animegamer4422/MY-MUSIC" && cd MY-MUSIC && chmod +x my-musicinst && termux-setup-storage && bash my-musicinst
+```
+cd && rm -rf MY-MUSIC && apt update && apt install git -y && git clone "https://github.com/animegamer4422/MY-MUSIC" && cd MY-MUSIC && chmod +x my-musicinst && termux-setup-storage && bash my-musicinst
