@@ -1,1 +1,1 @@
-cd && rm -rf MY-MUSIC && apt update && apt install git -y && git clone https://github.com/animegamer4422/MY-MUSIC && cd MY-MUSIC && chmod +x my-musicinst && bash my-musicinst
+cd && rm -rf MY-MUSIC && apt update && apt install git -y && git clone https://github.com/animegamer4422/MY-MUSIC && cd MY-MUSIC && chmod +x my-music* && bash my-musicinst
