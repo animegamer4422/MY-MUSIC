@@ -196,9 +196,9 @@ Now Commencing Download
 "
 cd
 
-video=$(youtube-dl -g -f "bestvideo[height<="${QUALITY:=1080}]"" "$URL")
+video=$(youtube-dl -g -f "bestvideo[height<="${QUALITY:=1080}]/bestvideo/best"" "$URL")
 
-audio=$(youtube-dl -g -f "bestaudio" "$URL")
+audio=$(youtube-dl -g -f "bestaudio/best" "$URL")
 
 filename="$Name $CREATOR"
 
@@ -211,7 +211,7 @@ ffmpeg -i rename-me.mkv rename-me.mp4
 
 rm rename-me.mkv
 
-mv rename-me.mp4 ~/storage/shared/MY-MUSIC/"$filename.mp4"
+mv rename-me.mp4 "$LOCATION"/"$filename.mp4"
 
 exit;;
 
@@ -260,7 +260,7 @@ echo "
 
 Now Commencing Download"
 
-audio=$(youtube-dl -g -f "bestaudio" "$URL")
+audio=$(youtube-dl -g -f "bestaudio/best" "$URL")
 
 title=$(youtube-dl --get-title "$URL")
 
@@ -272,11 +272,8 @@ ffmpeg  -i rename-me.mkv rename-me.mp3
 
 rm rename-me.mkv
 
-mv ~/rename-me.mp3 ~/storage/shared/MY-MUSIC/"$filename.mp3"
+mv ~/rename-me.mp3 "$LOCATION"/"$filename.mp3"
 
-echo "
-
-      INTERNAL/MY-MUSIC/$filename.mp3"
 exit;;
 
              6) echo "
@@ -328,7 +325,7 @@ Now Commencing Download
 
 "
 
-cd ~/storage/shared/MY-MUSIC/
+cd "$LOCATION"
 
 echo "ffmpeg -i "$URL" $ARGS"
 
@@ -363,7 +360,7 @@ echo ""
 
 read -p "TAG : " TAG
 
-youtube-dl --write-sub --convert-subs srt --sub-lang "$LANG"  -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata -o "~/storage/shared/MY-MUSIC/%(title)s [$TAG] $CREATOR.%(ext)s" $URL
+youtube-dl --write-sub --convert-subs srt --sub-lang "$LANG"  -f "bestvideo[height<=${QUALITY:=720}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata -o "$LOCATION/%(title)s [$TAG] $CREATOR.%(ext)s" $URL
 
 exit;;
 	*) clear
