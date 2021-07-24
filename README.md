@@ -25,4 +25,4 @@ Copy everything below and paste it in termux or terminal
 
 
 ```
-cd && rm -rf MY-MUSIC && apt update && apt install git -y && git clone "https://github.com/animegamer4422/MY-MUSIC" && cd MY-MUSIC && chmod +x my-musicinst && termux-setup-storage && bash my-musicinst
+cd && rm -rf MY-MUSIC && apt update && apt install git -y && git clone "https://github.com/animegamer4422/MY-MUSIC" && cd MY-MUSIC && chmod +x my-music* && termux-setup-storage && bash my-musicinst
