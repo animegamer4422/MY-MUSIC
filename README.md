@@ -3,7 +3,7 @@ my-music are a set of scripts created by me in order to download YOUTUBE videos 
 
 `BTW it can run on Linux System but necessary dependencies need to be installed through your systems respective package managers`
 
-#SUPPORTED SITES
+# SUPPORTED SITES
 
 Moreover it's power isn't just limited to Youtube if you want a list of sites where it works natively check the link below.
 
@@ -11,7 +11,7 @@ https://ytdl-org.github.io/youtube-dl/supportedsites.html
 
 IT USES OPEN SOURCE TOOLS WHICH ARE FFMPEG & YOUTUBE-DL
 
-#The Usage 
+# The Usage 
 
 Just share the video to termux after installing the SCRIPT
 
@@ -21,7 +21,7 @@ If you are on a Linux System (for non-debian based systems use your respective p
 
 Or type mm in termux rather than that it also has a file converter for offline video and audio conversion.
 
-#INSTALLATION
+# INSTALLATION
 One line to install all in termux or debian based linux (Ubuntu) terminal
 Copy everything below and paste it in termux or terminal
 
