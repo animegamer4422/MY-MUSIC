@@ -15,7 +15,7 @@ IT USES OPEN SOURCE TOOLS WHICH ARE FFMPEG & YOUTUBE-DL
 
 Just share the video to termux after installing the SCRIPT
 
-Or type mm in termux rather than that it also has a file converter for offline video and audio conversion.
+Or type mm in termux
 
 # INSTALLATION
 One line to install all in termux or debian based linux (Ubuntu) terminal
