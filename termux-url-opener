@@ -1,6 +1,6 @@
 URL=$1
 
-LOCATION="~/storage/shared/MY-MUSIC"
+LOCATION="$HOME/storage/shared/MY-MUSIC"
 
 while :
 do
