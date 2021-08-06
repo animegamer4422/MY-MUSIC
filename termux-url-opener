@@ -272,7 +272,7 @@ ffmpeg  -i rename-me.mkv rename-me.mp3
 
 rm rename-me.mkv
 
-mv ~/rename-me.mp3 "$LOCATION"/"$filename.mp3"
+mv ~/rename-me.mp3 "$LOCATION"/"$filename".mp3
 
 exit;;
 
