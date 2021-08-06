@@ -211,7 +211,7 @@ ffmpeg -i rename-me.mkv rename-me.mp4
 
 rm rename-me.mkv
 
-mv rename-me.mp4 "$LOCATION"/"$filename.mp4"
+mv rename-me.mp4 "$LOCATION"/"$filename".mp4
 
 exit;;
 
