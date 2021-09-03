@@ -23,7 +23,7 @@ echo "
         7) ADD CUSTOM ARGS TO FFMPEG
 
 	8) DOWNLOAD WITH SUBS
-" && Video="$(youtube-dl --get-filename -o '%(id)s.%(ext)s' "$URL")"
+" && Video="$(youtube-dl --get-filename -o '%(title)s by %(uploader)s' "$URL")"
 
 
 echo "
