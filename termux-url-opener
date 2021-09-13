@@ -200,7 +200,7 @@ video=$(youtube-dl -g -f "bestvideo[height<="${QUALITY:=1080}]/bestvideo/best"" 
 
 audio=$(youtube-dl -g -f "bestaudio/best" "$URL")
 
-filename="$Name $TAG"
+filename="$Name"
 
 echo "$filename
 
@@ -234,6 +234,8 @@ echo $(youtube-dl --get-title "$URL")
 
 read -p 'NAME: ' TAG
 
+Name=$(echo ${TAG:=$Video})
+
 echo "
 Examples: 3:15:30.500 = 3 hours 15 mins 30 secs 500 millisecs
              6:15.300 = 6 min 15 sec 300 millisecs
@@ -264,7 +266,7 @@ audio=$(youtube-dl -g -f "bestaudio/best" "$URL")
 
 title=$(youtube-dl --get-title "$URL")
 
-filename="$Name $TAG"
+filename="$Name"
 
 ffmpeg  -i "$audio" -ss $STARTTIME -to $ENDTIME -c copy rename-me.mkv
 
