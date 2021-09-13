@@ -200,7 +200,7 @@ video=$(youtube-dl -g -f "bestvideo[height<="${QUALITY:=1080}]/bestvideo/best"" 
 
 audio=$(youtube-dl -g -f "bestaudio/best" "$URL")
 
-filename="$Name $CREATOR"
+filename="$Name $TAG"
 
 echo "$filename
 
@@ -264,7 +264,7 @@ audio=$(youtube-dl -g -f "bestaudio/best" "$URL")
 
 title=$(youtube-dl --get-title "$URL")
 
-filename="$title $TAG"
+filename="$Name $TAG"
 
 ffmpeg  -i "$audio" -ss $STARTTIME -to $ENDTIME -c copy rename-me.mkv
 
