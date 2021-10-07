@@ -10,7 +10,7 @@ Let Me Setup Things For You. Just Wait Till I Am Finished
 read -p 'PRESS ENTER TO CONTINUE'
 apt update -y
 apt install python atomicparsley ffmpeg -y
-pip install --upgrade pip youtube-dl lolcat
+pip install --upgrade pip youtube-dl
 apt autoremove -y
 cd
 
