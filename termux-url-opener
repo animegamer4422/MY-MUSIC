@@ -23,7 +23,7 @@ echo "
         7) ADD CUSTOM ARGS TO FFMPEG
 
 	8) DOWNLOAD WITH SUBS
-" && Video="$(youtube-dl --get-filename -o '%(title)s by %(uploader)s' "$URL")"
+" && Video="$(yt-dlp --get-filename -o '%(title)s by %(uploader)s' "$URL")"
 
 
 echo "
@@ -68,7 +68,7 @@ Now Commencing Download
 "
 
 
-youtube-dl -f "bestvideo[height<=${QUALITY:=1080}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s [$TAG].%(ext)s" "$URL"
+yt-dlp -f "bestvideo[height<=${QUALITY:=1080}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s [$TAG].%(ext)s" "$URL"
 
 exit;;
 
@@ -102,9 +102,9 @@ Now Commencing Download
 
 "
 
-title=$(youtube-dl --get-title $URL)
+title=$(yt-dlp --get-title $URL)
 
-youtube-dl -f "bestvideo[height<=${QUALITY:=1080}][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s [$TAG].%(ext)s" "$URL"
+yt-dlp -f "bestvideo[height<=${QUALITY:=1080}][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s [$TAG].%(ext)s" "$URL"
 
 exit;;
 
@@ -127,9 +127,9 @@ echo "
 Now Commencing Download
 
 "
-title=$(youtube-dl --get-title $URL)
+title=$(yt-dlp --get-title $URL)
 
-youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 -o "$LOCATION/%(title)s "[$TAG]".%(ext)s" $URL
+yt-dlp --add-metadata --embed-thumbnail -x --audio-format mp3 -o "$LOCATION/%(title)s "[$TAG]".%(ext)s" $URL
 
 exit;;
 
@@ -196,9 +196,9 @@ Now Commencing Download
 "
 cd
 
-video=$(youtube-dl -g -f "bestvideo[height<="${QUALITY:=1080}]/bestvideo/best"" "$URL")
+video=$(yt-dlp -g -f "bestvideo[height<="${QUALITY:=1080}]/bestvideo/best"" "$URL")
 
-audio=$(youtube-dl -g -f "bestaudio/best" "$URL")
+audio=$(yt-dlp -g -f "bestaudio/best" "$URL")
 
 filename="$Name"
 
@@ -230,7 +230,7 @@ echo "
 And To Help You This Is The Original Video Title
 
 "
-echo $(youtube-dl --get-title "$URL")
+echo $(yt-dlp --get-title "$URL")
 
 read -p 'NAME: ' TAG
 
@@ -262,9 +262,9 @@ echo "
 
 Now Commencing Download"
 
-audio=$(youtube-dl -g -f "bestaudio/best" "$URL")
+audio=$(yt-dlp -g -f "bestaudio/best" "$URL")
 
-title=$(youtube-dl --get-title "$URL")
+title=$(yt-dlp --get-title "$URL")
 
 filename="$Name"
 
@@ -297,9 +297,9 @@ echo "
 Now Commencing Download
 
 "
-title=$(youtube-dl --get-title $URL)
+title=$(yt-dlp --get-title $URL)
 
-echo youtube-dl $ARGS $URL
+echo yt-dlp $ARGS $URL
 
 echo ""
 
