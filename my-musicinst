@@ -27,7 +27,7 @@ cd
 
 cp ~/MY-MUSIC/my-* "/data/data/com.termux/files/usr/bin"
 
-cp ~/MY-MUSIC/file* "/data/data/com.termux/files/usr/bin"
+cp ~/MY-MUSIC/con* "/data/data/com.termux/files/usr/bin"
 
 cp ~/MY-MUSIC/termux-url-opener ~/bin/
 
@@ -35,7 +35,7 @@ chmod +x /data/data/com.termux/files/usr/bin/my-*
 
 chmod +x ~/bin/termux-*
 
-chmod +x /data/data/com.termux/files/usr/bin/file*
+chmod +x /data/data/com.termux/files/usr/bin/con*
 
 cd ~/../usr/bin
 
