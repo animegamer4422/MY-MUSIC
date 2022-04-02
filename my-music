@@ -72,10 +72,10 @@ Now Commencing Download
 
 "
 
-CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
+CREATOR="by $(yt-dlp --get-filename -o "%(uploader)s" "$URL")"
 
 
-youtube-dl -f "bestvideo[height<=${QUALITY:=1080}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s [$TAG] $CREATOR.%(ext)s" "$URL"
+yt-dlp -f "bestvideo[height<=${QUALITY:=1080}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s [$TAG] $CREATOR.%(ext)s" "$URL"
 
 exit;;
 
@@ -115,7 +115,7 @@ Now Commencing Download
 
 "
 
-CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
+CREATOR="by $(yt-dlp --get-filename -o "%(uploader)s" "$URL")"
 
 youtube-dl -f "bestvideo[height<=${QUALITY:=1080}][ext=mp4]/bestvideo[height<=$QUALITY]/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s [$TAG] $CREATOR.%(ext)s" "$URL"
 
@@ -147,7 +147,7 @@ Now Commencing Download
 
 "
 
-CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
+CREATOR="by $(yt-dlp --get-filename -o "%(uploader)s" "$URL")"
 
 youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 -o "$LOCATION/%(title)s "[$TAG]" $CREATOR.%(ext)s" $URL
 
@@ -224,11 +224,11 @@ Now Commencing Download
 cd
 
 
-CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
+CREATOR="by $(yt-dlp --get-filename -o "%(uploader)s" "$URL")"
 
-video=$(youtube-dl -g -f "bestvideo[height<="${QUALITY:=1080}]"" "$URL")
+video=$(yt-dlp -g -f "bestvideo[height<="${QUALITY:=1080}]"" "$URL")
 
-audio=$(youtube-dl -g -f "bestaudio" "$URL")
+audio=$(yt-dlp -g -f "bestaudio" "$URL")
 
 filename="$Name $CREATOR"
 
@@ -267,7 +267,7 @@ echo "
 And To Help You This Is The Original Video Title
 
 "
-echo $(youtube-dl --get-title "$URL")
+echo $(yt-dlp --get-title "$URL")
 
 read -p 'NAME: ' TAG
 
@@ -297,11 +297,11 @@ echo "
 
 Now Commencing Download"
 
-CREATOR="by $(youtube-dl --get-filename -o "%(uploader)s" "$URL")"
+CREATOR="by $(yt-dlp --get-filename -o "%(uploader)s" "$URL")"
 
-audio=$(youtube-dl -g -f "bestaudio" "$URL")
+audio=$(yt-dlp -g -f "bestaudio" "$URL")
 
-title=$(youtube-dl --get-title "$URL")
+title=$(yt-dlp --get-title "$URL")
 
 filename="$TAG $CREATOR"
 
@@ -343,13 +343,13 @@ echo "
 Now Commencing Download
 
 "
-title=$(youtube-dl --get-title $URL)
+title=$(yt-dlp --get-title $URL)
 
 echo youtube-dl $ARGS $URL
 
 echo ""
 
-youtube-dl $ARGS $URL
+yt-dlp $ARGS $URL
 
 echo"";;
 
@@ -406,7 +406,7 @@ echo "e.g. 1080 720 480 360 240 144
 
 read -p 'QUALITY [DEFAULT = 1080] : ' QUALITY
 
-youtube-dl --list-subs "$URL"
+yt-dlp --list-subs "$URL"
 
 echo ""
 echo "Ex: en ru"
