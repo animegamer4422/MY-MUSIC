@@ -9,6 +9,7 @@ Let Me Setup Things For You. Just Wait Till I Am Finished
 "
 read -p 'PRESS ENTER TO CONTINUE'
 apt update -y
+apt update && apt full-upgrade
 apt install python atomicparsley ffmpeg -y
 pip install --upgrade pip yt-dlp
 apt autoremove -y
