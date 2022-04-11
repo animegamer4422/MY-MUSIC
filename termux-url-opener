@@ -129,7 +129,7 @@ Now Commencing Download
 "
 title=$(yt-dlp --get-title $URL)
 
-yt-dlp --add-metadata --embed-thumbnail -x --audio-format mp3 -o "$LOCATION/%(title)s "[$TAG]".%(ext)s" $URL
+yt-dlp --add-metadata -x --audio-format mp3 -o "$LOCATION/%(title)s "[$TAG]".%(ext)s" $URL
 
 exit;;
 
