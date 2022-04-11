@@ -149,7 +149,7 @@ Now Commencing Download
 
 CREATOR="by $(yt-dlp --get-filename -o "%(uploader)s" "$URL")"
 
-youtube-dl --add-metadata --embed-thumbnail -x --audio-format mp3 -o "$LOCATION/%(title)s "[$TAG]" $CREATOR.%(ext)s" $URL
+youtube-dl --add-metadata -x --audio-format mp3 -o "$LOCATION/%(title)s "[$TAG]" $CREATOR.%(ext)s" $URL
 
 exit;;
 
