@@ -8,14 +8,7 @@ Let Me Setup Things For You. Just Wait Till I Am Finished
 
 "
 cd
-read -p 'PRESS ENTER TO CONTINUE'
-echo "deb http://deb.volian.org/volian/ scar main" | tee /data/data/com.termux/files/usr/etc/apt/sources.list.d/volian-archive-scar-unstable.list
-wget -qO - https://deb.volian.org/volian/scar.key | tee /data/data/com.termux/files/usr/etc/apt/trusted.gpg.d/volian-archive-scar-unstable.gpg > /dev/null
-apt update
-apt install nala -y
-touch .bashrc
-alias apt=nala >> .bashrc
-source .bashrc
+read -p 'PRESS ENTER TO CONTINUE' or Ctrl + C to cancel
 apt update
 apt update && apt full-upgrade
 apt install python atomicparsley ffmpeg -y
