@@ -8,7 +8,7 @@ Let Me Setup Things For You. Just Wait Till I Am Finished
 
 "
 cd
-read -p 'PRESS ENTER TO CONTINUE' or Ctrl + C to cancel
+read -p 'PRESS ENTER TO CONTINUE or Ctrl + C to cancel'
 apt update
 apt update && apt full-upgrade
 apt install python atomicparsley ffmpeg -y
