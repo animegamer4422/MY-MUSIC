@@ -42,13 +42,13 @@ VIDEO + AUDIO
 
 "
 echo "
-Master Input The MRL you Want To download
+Input The MRL you Want To download
 "
 
 read -p 'MRL(VIDEO LINK) : ' URL
 
 echo "
-Master Tell Me The Quality You Want To Download The Video In
+Tell Me The Quality You Want To Download The Video In
 
 "
 
@@ -60,7 +60,7 @@ read -p 'QUALITY (DEFAULT=1080) : ' QUALITY
 
 echo "
 
-Master Now Tell Me What You Want To Tag To The Name Of The Video
+Now Tell Me What You Want To Tag To The Name Of The Video
 
 "
 
@@ -86,12 +86,12 @@ VIDEO ONLY
 
 "
 echo "
-Master Input The MRL you Want To download
+Input The MRL you Want To download
 "
 
 read -p 'MRL(VIDEO LINK) : ' URL
 
-echo "Master Tell Me The Quality You Want To Download The Video In
+echo "Tell Me The Quality You Want To Download The Video In
 
 "
 
@@ -103,7 +103,7 @@ read -p 'QUALITY (DEFAULT=1080) : ' QUALITY
 
 echo "
 
-Master Now Tell Me What You Want To Tag To The Name Of The Video
+Now Tell Me What You Want To Tag To The Name Of The Video
 
 "
 
@@ -128,14 +128,14 @@ AUDIO ONLY
 "
 
 echo "
-Master Input The MRL you Want To download
+Input The MRL you Want To download
 "
 
 read -p 'MRL(VIDEO/AUDIO LINK) : ' URL
 
 echo "
 
-Master Now Tell Me What You Want To Tag To The Name Of The Video
+Now Tell Me What You Want To Tag To The Name Of The Video
 
 "
 
@@ -160,14 +160,14 @@ CUT AND SAVE
 "
 
 echo "
-Master Input The MRL you Want To download
+Input The MRL you Want To download
 "
 
 read -p 'MRL(VIDEO LINK) : ' URL
 
 echo "
 
-Master Tell Me The Quality You Want To Download The Video In
+Tell Me The Quality You Want To Download The Video In
 
 "
 
@@ -179,7 +179,7 @@ read -p 'QUALITY (DEFAULT=1080) : ' QUALITY
 
 echo "
 
-Master Now Tell Me What You Want To Name The Video
+Now Tell Me What You Want To Name The Video
 
 "
 echo "And To Help You This Is The Original Video Title And It's Also The default Name"
@@ -202,7 +202,7 @@ Examples: 3:15:30.500 = 3 hours 15 mins 30 secs 500 milliseconds
 
 echo "
 
-Master Now Give Me The Start Time
+Now Give Me The Start Time
 
 "
 
@@ -210,7 +210,7 @@ read -p 'HH:MM:SS.MLS : ' STARTTIME
 
 echo "
 
-Master Now Give Me The END Time
+Now Give Me The END Time
 
 "
 
@@ -252,14 +252,14 @@ CUT AND SAVE AUDIO ONLY
 "
 
 echo "
-Master Input The MRL you Want To download
+Input The MRL you Want To download
 "
 
 read -p 'MRL(VIDEO LINK) : ' URL
 
 echo "
 
-Master Now Tell Me What You Want To Name The Video
+Now Tell Me What You Want To Name The Video
 
 "
 echo "
@@ -279,7 +279,7 @@ Examples: 3:15:30.500 = 3 hours 15 mins 30 secs 500 millisecs
 
 echo "
 
-Master Now Give Me The Start Time
+Now Give Me The Start Time
 
 "
 
@@ -287,7 +287,7 @@ read -p 'HH:MM:SS.MLS : ' STARTTIME
 
 echo "
 
-Master Now Give Me The END Time
+Now Give Me The END Time
 
 "
 
@@ -325,14 +325,14 @@ CUSTOM ARGS
 "
 
 echo "
-Master Input The MRL you Want To download
+Input The MRL you Want To download
 "
 
 read -p 'MRL(VIDEO/AUDIO LINK) : ' URL
 
 echo "
 
-Master Now Tell Me What Arguments You Want To Add
+Now Tell Me What Arguments You Want To Add
 
 "
 
@@ -360,14 +360,14 @@ CUSTOM ARGS
 "
 
 echo "
-Master Input The MRL you Want To download
+Input The MRL you Want To download
 "
 
 read -p 'MRL(VIDEO/AUDIO LINK) : ' URL
 
 echo "
 
-Master Now Tell Me What Arguments You Want To Add
+Now Tell Me What Arguments You Want To Add
 
 "
 
@@ -389,14 +389,14 @@ ffmpeg -i "$URL" $ARGS;;
 		Download With Subs
 "
 echo "
-Master Input The MRL you Want To download
+Input The MRL you Want To download
 "
 
 read -p 'MRL(VIDEO LINK) : ' URL
 
 echo "
 
-Master Tell Me The Quality You Want To Download The Video In
+Tell Me The Quality You Want To Download The Video In
 
 "
 
