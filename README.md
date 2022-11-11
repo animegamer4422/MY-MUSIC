@@ -11,6 +11,9 @@ https://ytdl-org.github.io/youtube-dl/supportedsites.html
 
 IT USES OPEN SOURCE TOOLS WHICH ARE FFMPEG & YOUTUBE-DL
 
+# Example ScreenShot
+![Screenshot](https://raw.githubusercontent.com/animegamer4422/MY-MUSIC/master/TERMUX%20MY-MUSIC.jpg)
+
 # The Usage 
 
 Just share the video to termux after installing the SCRIPT
