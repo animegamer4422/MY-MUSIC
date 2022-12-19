@@ -14,6 +14,8 @@ IT USES OPEN SOURCE TOOLS WHICH ARE FFMPEG & YOUTUBE-DL
 # Example ScreenShot
 ![Screenshot](https://raw.githubusercontent.com/animegamer4422/MY-MUSIC/master/TERMUX%20MY-MUSIC.jpg)
 
+# INSTALLATION
+
 # The Usage 
 
 Just share the video to termux after installing the SCRIPT
@@ -21,6 +23,11 @@ Just share the video to termux after installing the SCRIPT
 Or type mm in termux
 
 # INSTALLATION
+
+Download Termux from F-droid
+
+`https://f-droid.org/en/packages/com.termux/`
+
 One line to install all in termux or debian based linux (Ubuntu) terminal
 Copy everything below and paste it in termux or terminal
 
