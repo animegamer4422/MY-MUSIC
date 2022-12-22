@@ -28,7 +28,7 @@ Download Termux from F-droid
 
 `https://f-droid.org/en/packages/com.termux/`
 
-![https://raw.githubusercontent.com/animegamer4422/MY-MUSIC/master/res/download-apk.png](https://f-droid.org/repo/com.termux_118.apk)
+![Download APK](https://raw.githubusercontent.com/animegamer4422/MY-MUSIC/master/res/download-apk.png)
 
 One line to install all in termux or debian based linux (Ubuntu) terminal
 Copy everything below and paste it in termux or terminal
