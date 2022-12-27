@@ -1,5 +1,5 @@
 #DEPENDENCIES
-#ffmpeg youtube-dl atomicparsley python-pip lolcat
+#ffmpeg youtube-dl atomicparsley python-pip openssl
 
 
 echo "
@@ -11,7 +11,7 @@ cd
 read -p 'PRESS ENTER TO CONTINUE or Ctrl + C to cancel'
 apt update
 apt update && apt upgrade -y
-apt install python atomicparsley ffmpeg -y
+apt install openssl-1.1-static python atomicparsley ffmpeg -y
 pip install --upgrade pip yt-dlp
 apt autoremove -y
 cd
