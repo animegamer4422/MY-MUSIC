@@ -10,8 +10,9 @@ Let Me Setup Things For You. Just Wait Till I Am Finished
 cd
 read -p 'PRESS ENTER TO CONTINUE or Ctrl + C to cancel'
 apt update
-apt update && apt upgrade -y
+apt update &&
 apt install openssl-1.1-static python atomicparsley ffmpeg -y
+apt upgrade -y
 pip install --upgrade pip yt-dlp
 apt autoremove -y
 cd
