@@ -303,7 +303,7 @@ echo yt-dlp $ARGS $URL
 
 echo ""
 
-youtube-dl $ARGS $URL
+yt-dlp $ARGS $URL
 
 echo"";;
 
