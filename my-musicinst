@@ -19,7 +19,11 @@ pip install --upgrade pip yt-dlp
 apt autoremove -y
 
 #Permission request for display over other apps for Termux
-echo "PROVIDE OVERLAY PERMISSION TO Termux after pressing Enter or press CTRL + C to cancel installation"
+echo "
+
+PROVIDE OVERLAY PERMISSION TO Termux after pressing Enter or press CTRL + C to cancel installation
+
+"
 
 read -p 'PRESS ENTER TO CONTINUE or Ctrl + C to cancel'
 
