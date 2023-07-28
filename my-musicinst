@@ -19,6 +19,10 @@ pip install --upgrade pip yt-dlp
 apt autoremove -y
 
 #Permission request for display over other apps for Termux
+echo "PROVIDE OVERLAY PERMISSION TO Termux after pressing Enter or press CTRL + C to cancel installation"
+
+read -p 'PRESS ENTER TO CONTINUE or Ctrl + C to cancel'
+
 am start --user 0 -a android.settings.action.MANAGE_OVERLAY_PERMISSION -d "package:com.termux"
 
 cd
